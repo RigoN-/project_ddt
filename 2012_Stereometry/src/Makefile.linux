@@ -1,0 +1,24 @@
+CC = gcc
+C_STD=c99
+STD = -std=$(C_STD)
+name =gmathematics
+TARGET = $(name).exe
+DEPEND = .depend
+INCS =  
+LDFLAGS =
+CFLAGS = $(INCS) -Wall -O2
+LIBS = -lglut -lGLU -lGL    
+OBJ  = $(name).o ./tools/rglTexture.o ./tools/rglImage.o
+#OBJ  = $(name).o ./tools/rglTexture.o ./tools/rglImage.o ./tools/rglMath3D.o
+.c.o:
+	$(CC) $(STD) $(CFLAGS) -c $< $(PROF) -o $@
+	
+all: $(name).exe 
+
+$(TARGET): $(OBJ)
+	$(CC) $(STD) $(OBJ) -o $(name) $(LDFLAGS) $(LIBS) 
+#	move /y $(name).exe ..\bin
+#	del    *.o
+#	del   .\tools\*.o
+clean:
+	rm  -R -f  *.o
