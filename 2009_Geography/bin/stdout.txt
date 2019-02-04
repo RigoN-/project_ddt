@@ -1,0 +1,96 @@
+BMP load OK ../data/textures/loading/load.bmp 
+Texture ../data/textures/loading/load.bmp load OK
+BMP load OK ../data/textures/loading/load_0.bmp 
+Texture ../data/textures/loading/load_0.bmp load OK
+BMP load OK ../data/textures/loading/load_1.bmp 
+Texture ../data/textures/loading/load_1.bmp load OK
+BMP load OK ../data/textures/loading/load_2.bmp 
+Texture ../data/textures/loading/load_2.bmp load OK
+BMP load OK ../data/textures/loading/load_3.bmp 
+Texture ../data/textures/loading/load_3.bmp load OK
+BMP load OK ../data/textures/loading/load_4.bmp 
+Texture ../data/textures/loading/load_4.bmp load OK
+BMP load OK ../data/textures/loading/load_5.bmp 
+Texture ../data/textures/loading/load_5.bmp load OK
+BMP load OK ../data/textures/nujhnoe/left.bmp 
+Texture ../data/textures/nujhnoe/left.bmp load OK
+BMP load OK ../data/textures/nujhnoe/right.bmp 
+Texture ../data/textures/nujhnoe/right.bmp load OK
+BMP load OK ../data/textures/scena0/fon.bmp 
+Texture ../data/textures/scena0/fon.bmp load OK
+BMP load OK ../data/textures/scena1/page1.1.bmp 
+Texture ../data/textures/scena1/page1.1.bmp load OK
+BMP load OK ../data/textures/scena2/page2.1.bmp 
+Texture ../data/textures/scena2/page2.1.bmp load OK
+BMP load OK ../data/textures/scena2/page3.1.bmp 
+Texture ../data/textures/scena2/page3.1.bmp load OK
+BMP load OK ../data/textures/scena3/page4.1.bmp 
+Texture ../data/textures/scena3/page4.1.bmp load OK
+BMP load OK ../data/textures/scena3/page5.1.bmp 
+Texture ../data/textures/scena3/page5.1.bmp load OK
+BMP load OK ../data/textures/scena4/page6.1.bmp 
+Texture ../data/textures/scena4/page6.1.bmp load OK
+BMP load OK ../data/textures/scena4/page7.1.bmp 
+Texture ../data/textures/scena4/page7.1.bmp load OK
+BMP load OK ../data/textures/scena5/page8.1.bmp 
+Texture ../data/textures/scena5/page8.1.bmp load OK
+BMP load OK ../data/textures/scena5/page9.1.bmp 
+Texture ../data/textures/scena5/page9.1.bmp load OK
+BMP load OK ../data/textures/scena5/page10.1.bmp 
+Texture ../data/textures/scena5/page10.1.bmp load OK
+BMP load OK ../data/textures/scena5/page11.1.bmp 
+Texture ../data/textures/scena5/page11.1.bmp load OK
+BMP load OK ../data/textures/scena7/page12.1.bmp 
+Texture ../data/textures/scena7/page12.1.bmp load OK
+BMP load OK ../data/textures/scena8/oblojka_2_back.bmp 
+Texture ../data/textures/scena8/oblojka_2_back.bmp load OK
+BMP load OK ../data/textures/scena0/oblojka_1_face.bmp 
+Texture ../data/textures/scena0/oblojka_1_face.bmp load OK
+BMP load OK ../data/textures/scena7/oblojka_1_back.bmp 
+Texture ../data/textures/scena7/oblojka_1_back.bmp load OK
+BMP load OK ../data/textures/scena1/oblojka_2_1_back.bmp 
+Texture ../data/textures/scena1/oblojka_2_1_back.bmp load OK
+BMP load OK ../data/textures/scena0/torec.bmp 
+Texture ../data/textures/scena0/torec.bmp load OK
+BMP load OK ../data/textures/menu/help_r.bmp 
+Texture ../data/textures/menu/help_r.bmp load OK
+BMP load OK ../data/textures/menu/help_l.bmp 
+Texture ../data/textures/menu/help_l.bmp load OK
+BMP load OK ../data/textures/menu/title.bmp 
+Texture ../data/textures/menu/title.bmp load OK
+1   Error reading  from ../data/textures/maps/map0.tga.
+2 Error reading  from ../data/textures/maps/map0.tga.
+TGA load OK ../data/textures/maps/map0.tga 
+Texture ../data/textures/maps/map0.tga load OK
+1   Error reading  from ../data/textures/maps/map1.tga.
+2 Error reading  from ../data/textures/maps/map1.tga.
+TGA load OK ../data/textures/maps/map1.tga 
+Texture ../data/textures/maps/map1.tga load OK
+1   Error reading  from ../data/textures/maps/map2.tga.
+2 Error reading  from ../data/textures/maps/map2.tga.
+TGA load OK ../data/textures/maps/map2.tga 
+Texture ../data/textures/maps/map2.tga load OK
+1   Error reading  from ../data/textures/maps/map3.tga.
+2 Error reading  from ../data/textures/maps/map3.tga.
+TGA load OK ../data/textures/maps/map3.tga 
+Texture ../data/textures/maps/map3.tga load OK
+1   Error reading  from ../data/textures/menu/menu0.tga.
+2 Error reading  from ../data/textures/menu/menu0.tga.
+TGA load OK ../data/textures/menu/menu0.tga 
+Texture ../data/textures/menu/menu0.tga load OK
+1   Error reading  from ../data/textures/menu/menu1.tga.
+2 Error reading  from ../data/textures/menu/menu1.tga.
+TGA load OK ../data/textures/menu/menu1.tga 
+Texture ../data/textures/menu/menu1.tga load OK
+1   Error reading  from ../data/textures/menu/menu2.tga.
+2 Error reading  from ../data/textures/menu/menu2.tga.
+TGA load OK ../data/textures/menu/menu2.tga 
+Texture ../data/textures/menu/menu2.tga load OK
+1   Error reading  from ../data/textures/menu/menu4.tga.
+2 Error reading  from ../data/textures/menu/menu4.tga.
+TGA load OK ../data/textures/menu/menu4.tga 
+Texture ../data/textures/menu/menu4.tga load OK
+1   Error reading  from ../data/textures/menu/menu3.tga.
+2 Error reading  from ../data/textures/menu/menu3.tga.
+TGA load OK ../data/textures/menu/menu3.tga 
+Texture ../data/textures/menu/menu3.tga load OK

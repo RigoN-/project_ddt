@@ -5,5 +5,5 @@
 Руководитель: Романенко Игорь Николаевич
 Программа: Geometry (OpenGL)
 Язык программирования: Си
-Доп. библиотеки: glut, openglб SDL
+Доп. библиотеки: glut, opengl SDL
 Сборка: make -f Makefile.sdl

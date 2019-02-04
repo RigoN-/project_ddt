@@ -1,0 +1,12 @@
+CC = gcc
+LDFLAGS = -L/usr/X11R6/lib
+CFLAGS = -Wall -O2
+LIBS = -lGL -lGLU -lglut
+
+all:GLUT_keyboard
+
+GLUT_keyboard: GLUT_keyboard.o 
+	$(CC) $(CFLAGS) $(LDFLAGS) $(LIBS) $^ -o ../bin/$@ 
+
+clean:
+	rm  -R -f  *.o

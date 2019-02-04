@@ -1,0 +1,22 @@
+CC = gcc
+C_STD= c99
+STD = -std=$(C_STD)
+name = SDL_geog
+TARGET = ../bin/$(name)
+DEPEND = .depend
+LIBS=-lGL -lGLU -lSDL -lglut -ljpeg
+LDFLAGS =`sdl-config --libs` -L/usr/X11R6/lib $(LIBS)
+CFLAGS = `sdl-config --cflags` -Wall -O2
+OBJ = ./tools/textglut.o ./tools/texture.o ./tools/image_lib.o menu.o
+ 
+.c.o:
+	$(CC) $(STD) $(CFLAGS) -Wall -O2 -c -o $@ $<
+
+$(TARGET): $(name).o $(OBJ)
+	$(CC) $(LDFLAGS) $^ -o  $@
+	rm  -R -f  *.o
+	rm  -R -f  ./tools/*.o
+
+
+clean:
+	rm  -R -f  *.o

@@ -1,0 +1,34 @@
+CC = g++
+name = SDL_geog
+TARGET = $(name).exe
+DEPEND = .depend
+INCS =  -I"C:/MinGW/include"  -I"C:/MinGW/include/c++"  -I"c:/MinGW/include" 
+LDFLAGS = 
+CFLAGS = $(INCS) -Wall -O0
+LIBS = -L"c:/MinGW/lib" -lmingw32 -lSDLmain -lSDL -lopengl32 -lglut32 -lglu32 -mwindows 
+OBJ  = $(name).o  ./tools/texture.o ./tools/textglut.o ./tools/image_lib.o menu.o
+
+all: $(name).exe 
+
+menu.o : menu.c 
+	$(CC) $(CFLAGS) -c menu.c  -o  menu.o
+
+./tools/texture.o : ./tools/texture.c 
+	$(CC) $(CFLAGS) -c ./tools/texture.c  -o  ./tools/texture.o
+
+./tools/textglut.o : ./tools/textglut.c 
+	$(CC) $(CFLAGS) -c ./tools/textglut.c  -o  ./tools/textglut.o
+	
+./tools/image_lib.o :./tools/image_lib.c 
+	$(CC) $(CFLAGS) -c ./tools/image_lib.c  -o ./tools/image_lib.o	
+	
+	
+$(TARGET): $(OBJ)
+	$(CC) $(OBJ) -o $(name).exe $(LIBS) $(CFLAGS)
+	mv -f $(name).exe ../bin
+	rm  -R -f  *.o
+	rm  -R -f  ./tools/*.o
+
+
+clean:
+	rm  -R -f  *.o

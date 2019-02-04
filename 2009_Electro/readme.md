@@ -5,5 +5,5 @@
 Руководитель: Романенко Игорь Николаевич
 Программа: Електричество 1 (OpenGL)
 Язык программирования: Pascal
-Доп. библиотеки: glut, openglб SDL
+Доп. библиотеки: glut, opengl SDL
 Сборка(Free Pascal): make - f  Makefile_fpc.sdl 
