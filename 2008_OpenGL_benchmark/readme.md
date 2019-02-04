@@ -6,4 +6,4 @@
 Программа: OpenGL_Benchmark
 Язык программирования: Python
 Доп. библиотеки: glut, opengl, glFreeType
-Сборка(Free Pascal):  
+Сборка:  

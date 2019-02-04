@@ -1,0 +1,28 @@
+CC = g++
+name = SDL_astronomy
+TARGET = $(name).exe
+DEPEND = .depend
+INCS =  -I"c:/MinGW/include"  -I"C:/DEV-CPP/include/g++-3"  -I"c:/MinGW/include" 
+LDFLAGS = 
+CFLAGS = $(INCS) -Wall -O0
+LIBS = -L"c:/MinGW/lib" -lmingw32 -lSDLmain -lSDL -lopengl32 -lglut32 -lglu32 -mwindows 
+OBJ  = $(name).o  ./tools/texture.o  ./tools/image_lib.o 
+
+all: $(name).exe 
+
+./tools/texture.o : ./tools/texture.c 
+	$(CC) $(CFLAGS) -c ./tools/texture.c  -o  ./tools/texture.o
+	
+./tools/image_lib.o :./tools/image_lib.c 
+	$(CC) $(CFLAGS) -c ./tools/image_lib.c  -o ./tools/image_lib.o	
+	
+	
+$(TARGET): $(OBJ)
+	$(CC) $(OBJ) -o $(name).exe $(LIBS) $(CFLAGS)
+	mv -f $(name).exe ../bin
+	rm  -R -f  *.o
+	rm  -R -f  ./tools/*.o
+
+
+clean:
+	rm  -R -f  *.o

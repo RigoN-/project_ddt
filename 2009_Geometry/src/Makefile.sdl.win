@@ -1,0 +1,25 @@
+CC = g++
+name = SDL_geometry
+TARGET = $(name).exe
+DEPEND = .depend
+INCS =  -I"c:/MinGW/include"  -I"C:/DEV-CPP/include/g++-3"  -I"c:/MinGW/include" 
+LDFLAGS = 
+CFLAGS = $(INCS) -Wall -O0
+LIBS = -L"c:/MinGW/lib" -lmingw32 -lSDLmain -lSDL -lopengl32 -lglut32 -lglu32 -mwindows 
+OBJ  = $(name).o  ./tools/texture.o  ./tools/image_lib.o 
+
+all: $(name).exe 
+
+texture.o :texture.c 
+	$(CC) $(CFLAGS) -c texture.c  -o texture.o
+	
+image_lib.o :image_lib.c 
+	$(CC) $(CFLAGS) -c image_lib.c  -o image_lib.o	
+	
+	
+$(TARGET): $(OBJ)
+	$(CC) $(OBJ) -o $(name).exe $(LIBS) $(CFLAGS)
+	rm  -R -f  *.o
+	mv -f  ./$(name).exe ../bin 
+clean:
+	rm  -R -f  *.o
