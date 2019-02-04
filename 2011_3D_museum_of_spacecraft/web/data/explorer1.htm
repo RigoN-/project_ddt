@@ -1,0 +1,156 @@
+<html>
+	<meta http-equiv="content-type" content="text/html; charset=UTF8">
+	<head>
+		<title>3D-музей космической техники</title>
+		<link href="../style.css" rel="stylesheet" type="text/css">
+	
+<script type="text/javascript" src="scripts/math3D.js"></script>
+<script type="text/javascript" src="scripts/modelLoader.js"></script>
+
+<input type="hidden" name="model" id="model" value="explorer1"/>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+  #ifdef GL_ES
+  precision highp float;
+  #endif
+
+  varying vec2 vTextureCoord;
+  varying vec4 vTransformedNormal;
+  varying vec4 vPosition;
+
+  uniform float uMaterialShininess;
+
+  uniform bool uShowSpecularHighlights;
+  uniform bool uUseLighting;
+  uniform bool uUseTextures;
+
+  uniform vec3 uAmbientColor;
+
+  uniform vec3 uPointLightingLocation;
+  uniform vec3 uPointLightingSpecularColor;
+  uniform vec3 uPointLightingDiffuseColor;
+
+  uniform sampler2D uSampler;
+
+
+  void main(void) {
+    vec3 lightWeighting;
+    if (!uUseLighting) {
+      lightWeighting = vec3(1.0, 1.0, 1.0);
+    } else {
+      vec3 lightDirection = normalize(uPointLightingLocation - vPosition.xyz);
+      vec3 normal = normalize(vTransformedNormal.xyz);
+
+      float specularLightWeighting = 0.0;
+      if (uShowSpecularHighlights) {
+        vec3 eyeDirection = normalize(-vPosition.xyz);
+        vec3 reflectionDirection = reflect(-lightDirection, normal);
+
+        specularLightWeighting = pow(max(dot(reflectionDirection, eyeDirection), 0.0), uMaterialShininess);
+      }
+
+      float diffuseLightWeighting = max(dot(normal, lightDirection), 0.0);
+      lightWeighting = uAmbientColor
+        + uPointLightingSpecularColor * specularLightWeighting
+        + uPointLightingDiffuseColor * diffuseLightWeighting;
+    }
+
+    vec4 fragmentColor;
+    if (uUseTextures) {
+      fragmentColor = texture2D(uSampler, vec2(vTextureCoord.s, vTextureCoord.t));
+    } else {
+      fragmentColor = vec4(1.0, 1.0, 1.0, 1.0);
+    }
+    gl_FragColor = vec4(fragmentColor.rgb * lightWeighting, fragmentColor.a);
+  }
+</script>
+
+<script id="vertex-shader" type="x-shader/x-vertex">
+  attribute vec3 aVertexPosition;
+  attribute vec3 aVertexNormal;
+  attribute vec2 aTextureCoord;
+
+  uniform mat4 uMVMatrix;
+  uniform mat4 uPMatrix;
+  uniform mat4 uNMatrix;
+
+  varying vec2 vTextureCoord;
+  varying vec4 vTransformedNormal;
+  varying vec4 vPosition;
+
+
+  void main(void) {
+    vPosition = uMVMatrix * vec4(aVertexPosition, 1.0);
+    gl_Position = uPMatrix * vPosition;
+    vTextureCoord = aTextureCoord;
+    vTransformedNormal = uNMatrix * vec4(aVertexNormal, 1.0);
+  }
+</script>
+
+<script type="text/javascript" src="scripts/shaders.js"></script>
+<script type="text/javascript" src="scripts/app.js"></script>
+
+		
+	</head>
+	<body onload="webGLStart();">
+			<div class="helper">Управление:<br>W-Вращение вперед<br>S-Вращение назад<br>A-Вращение влево<br>D-Вращение вправо<br>Q-Отдалить<br>E-Приблизить</div>
+
+		<table class="main" border="0" align="center">
+			<tr>
+				<td class="top" colspan="2"><img src="../images/text.png"></td>
+			</tr>
+			<tr>
+				<td class="topmenu" colspan="2">
+					<table class="topmenu_fr">
+						<tr>
+							<td><img src="../images/topmenu_start.png" align="right"></td>
+							<td class="menuitem"><a class="menu" href="../ussr.htm">СССР</a></td>
+							<td class="menuitem"><a class="menu" href="../usa.htm">США</a></td>
+							<td class="menuitem"><a class="menu" href="../europe.htm">Европа</a></td>
+							<td><img src="../images/topmenu_end.png" align="left"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td class="left_panel">
+	<!--					<ul>
+						<li>Item 1</li>
+						<li>Item 2</li>
+						<li>Item 3</li>
+						<li>Item 4</li>
+					</ul> -->
+				</td>
+				
+				<td class="text">
+					<table class="main" border="1">
+						<tr>
+							<td>  <canvas id="app-canvas" style="border: 0;" width="700" height="480"></canvas></td>
+						</tr>
+						<tr>
+							<td class="description"><b>Explorer-I</b> — первый американский искусственный спутник Земли (ИСЗ), запущенный в 3:48 по Всемирному координированному времени(UTC) 1 февраля 1958 года командой Вернера фон Брауна. Спутник «Explorer-I» прекратил радиопередачи 28 февраля 1958 года, находился на орбите до марта 1970 года.
+<br><br>
+<b>Устройство и план полета</b><br>
+Для запуска была создана форсированная версия баллистической ракеты Редстоун, названная Jupiter-C, первоначально предназначавшаяся для испытания уменьшенных макетов боеголовок, и отличавшейся от прототипа удлинёнными баками и форсированным двигателем, использовавшим вместо этилового спирта гидин (Hydyne).
+Для достижения орбитальной скорости использовалась связка из 15 твердотопливных ракет «Сержант», которые были, фактически, неуправляемыми реактивными снарядами с примерно 20 кг твердого смесевого топлива каждый; 11 ракет составляли вторую ступень, 3 — третью, и последняя — четвёртую. Двигатели второй и третьей ступени были смонтированы в двух вставленных друг в друга цилиндрах, а четвёртая устанавливалась сверху. Вся эта связка раскручивалась электромотором перед стартом. Это позволяло ей сохранять заданное положение продольной оси во время работы двигателей. Юпитер-С не имел четвёртой ступени, переделанная для запуска спутника ракета «задним числом» была названа Юнона-1.
+Отработавшие двигатели 2-й и 3-й ступеней последовательно сбрасывались, но от 4-й ступени спутник не отделялся. Поэтому в различных источниках приводятся массы спутника, как с учётом пустой массы последней ступени, так и без неё. Без учёта этой ступени масса спутника была ровно в 10 раз меньше массы первого советского ИСЗ — 8,3 кг, из них масса аппаратуры 4,5 кг. Тем не менее, в состав её входили счётчик Гейгера и датчик метеорных частиц.</td>
+						</tr>
+
+					</table>
+				</td>
+			</tr>
+					<td class="bottommenu" colspan="2"><br><a href="../index.htm">На главную</a> | <a href="../usa.htm">США</a><br><br>
+			<tr>
+				<td class="bottommenu" colspan="2">
+					<img src="../images/opengl-logo-1-1.png" align="center" width="55px">
+					<img src="../images/khronos.jpeg" align="center" width="150px">
+					<img src="../images/webgl.gif" align="center" width="60px">
+					</td>
+			</tr>
+			<tr>
+					<td class="copyright" colspan="2">Дом Детского Творчества<br>Разработчик - Матюнин Павел</td>
+			</tr>
+				</tr>
+		</table>
+	</body>
+</html>

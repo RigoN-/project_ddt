@@ -1,0 +1,159 @@
+<html>
+	<meta http-equiv="content-type" content="text/html; charset=UTF8">
+	<head>
+		<title>3D-музей космической техники</title>
+		<link href="../style.css" rel="stylesheet" type="text/css">
+	
+<script type="text/javascript" src="scripts/math3D.js"></script>
+<script type="text/javascript" src="scripts/modelLoader.js"></script>
+
+<input type="hidden" name="model" id="model" value="soyuz"/>
+
+<script id="fragment-shader" type="x-shader/x-fragment">
+  #ifdef GL_ES
+  precision highp float;
+  #endif
+
+  varying vec2 vTextureCoord;
+  varying vec4 vTransformedNormal;
+  varying vec4 vPosition;
+
+  uniform float uMaterialShininess;
+
+  uniform bool uShowSpecularHighlights;
+  uniform bool uUseLighting;
+  uniform bool uUseTextures;
+
+  uniform vec3 uAmbientColor;
+
+  uniform vec3 uPointLightingLocation;
+  uniform vec3 uPointLightingSpecularColor;
+  uniform vec3 uPointLightingDiffuseColor;
+
+  uniform sampler2D uSampler;
+
+
+  void main(void) {
+    vec3 lightWeighting;
+    if (!uUseLighting) {
+      lightWeighting = vec3(1.0, 1.0, 1.0);
+    } else {
+      vec3 lightDirection = normalize(uPointLightingLocation - vPosition.xyz);
+      vec3 normal = normalize(vTransformedNormal.xyz);
+
+      float specularLightWeighting = 0.0;
+      if (uShowSpecularHighlights) {
+        vec3 eyeDirection = normalize(-vPosition.xyz);
+        vec3 reflectionDirection = reflect(-lightDirection, normal);
+
+        specularLightWeighting = pow(max(dot(reflectionDirection, eyeDirection), 0.0), uMaterialShininess);
+      }
+
+      float diffuseLightWeighting = max(dot(normal, lightDirection), 0.0);
+      lightWeighting = uAmbientColor
+        + uPointLightingSpecularColor * specularLightWeighting
+        + uPointLightingDiffuseColor * diffuseLightWeighting;
+    }
+
+    vec4 fragmentColor;
+    if (uUseTextures) {
+      fragmentColor = texture2D(uSampler, vec2(vTextureCoord.s, vTextureCoord.t));
+    } else {
+      fragmentColor = vec4(1.0, 1.0, 1.0, 1.0);
+    }
+    gl_FragColor = vec4(fragmentColor.rgb * lightWeighting, fragmentColor.a);
+  }
+</script>
+
+<script id="vertex-shader" type="x-shader/x-vertex">
+  attribute vec3 aVertexPosition;
+  attribute vec3 aVertexNormal;
+  attribute vec2 aTextureCoord;
+
+  uniform mat4 uMVMatrix;
+  uniform mat4 uPMatrix;
+  uniform mat4 uNMatrix;
+
+  varying vec2 vTextureCoord;
+  varying vec4 vTransformedNormal;
+  varying vec4 vPosition;
+
+
+  void main(void) {
+    vPosition = uMVMatrix * vec4(aVertexPosition, 1.0);
+    gl_Position = uPMatrix * vPosition;
+    vTextureCoord = aTextureCoord;
+    vTransformedNormal = uNMatrix * vec4(aVertexNormal, 1.0);
+  }
+</script>
+
+<script type="text/javascript" src="scripts/shaders.js"></script>
+<script type="text/javascript" src="scripts/app.js"></script>
+
+		
+	</head>
+	<body onload="webGLStart();">
+		<div class="helper">Управление:<br>W-Вращение вперед<br>S-Вращение назад<br>A-Вращение влево<br>D-Вращение вправо<br>Q-Отдалить<br>E-Приблизить</div>
+		<table class="main" border="0" align="center">
+			<tr>
+				<td class="top" colspan="2"><img src="../images/text.png"></td>
+			</tr>
+			<tr>
+				<td class="topmenu" colspan="2">
+					<table class="topmenu_fr">
+						<tr>
+							<td><img src="../images/topmenu_start.png" align="right"></td>
+							<td class="menuitem"><a class="menu" href="../ussr.htm">СССР</a></td>
+							<td class="menuitem"><a class="menu" href="../usa.htm">США</a></td>
+							<td class="menuitem"><a class="menu" href="../europe.htm">Европа</a></td>
+							<td><img src="../images/topmenu_end.png" align="left"></td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td class="left_panel">
+	<!--					<ul>
+						<li>Item 1</li>
+						<li>Item 2</li>
+						<li>Item 3</li>
+						<li>Item 4</li>
+					</ul> -->
+				</td>
+				
+				<td class="text">
+					<table class="main" border="1">
+						<tr>
+							<td>  <canvas id="app-canvas" style="border: 0;" width="700" height="480"></canvas></td>
+						</tr>
+						<tr>
+							<td class="description"><b>«Союз ТМА-5»</b> — пилотируемый космический корабль серии «Союз ТМА».
+
+<br><br><b>Описание полёта(история)</b><br>
+Программой полёта предусматривалась стыковка корабля «Союз ТМА-5» с Международной космической станцией (МКС) и смена основного экипажа МКС. В это время на МКС находился 9-й основной экипаж — Юрий Маленченко и Эдвард Финк. 10-й основной экипаж МКС — Лерой Чиао и Салижан Шарипов работали на МКС до 25 апреля 2005 года.
+
+Космонавт ракетно-космических войск России — Юрий Шаргин проводил на МКС исследования и эксперименты в течение 9 суток и вернулся на Землю вместе с экипажем МКС-9 на корабле «Союз ТМА-4».
+
+Основной экипаж МКС-10 проводил различные научные исследования и эксперименты, поддерживал МКС в рабочем состоянии. Чиао и Шарипов осуществили два выхода в открытый космос. Первый выход 26 января продолжительностью 5 часов 29 минут. Второй выход 28 марта продолжительностью 4 часа 30 минут. Космонавты установили на внешней поверхности модуля «Звезда» антенны, необходимые для коммуникации с европейским грузовым кораблём (ATV, Automated Transfer Vehicle), который планируется отправить к МКС в 2006 году. Также, Салижан Шарипов запустил Наноспутник.
+
+Во время пребывания на МКС, экипаж МКС-10 принял и разгрузил два грузовых космических корабля «Прогресс».</td>
+						</tr>
+
+					</table>
+				</td>
+			</tr>
+					<td class="bottommenu" colspan="2"><br><a href="../index.htm">На главную</a> | <a href="../ussr.htm">СССР</a><br><br>
+			<tr>
+				<td class="bottommenu" colspan="2">
+					<img src="../images/opengl-logo-1-1.png" align="center" width="55px">
+					<img src="../images/khronos.jpeg" align="center" width="150px">
+					<img src="../images/webgl.gif" align="center" width="60px">
+					</td>
+			</tr>
+			<tr>
+					<td class="copyright" colspan="2">Дом Детского Творчества<br>Разработчик - Матюнин Павел</td>
+			</tr>
+				</tr>
+		</table>
+	</body>
+</html>

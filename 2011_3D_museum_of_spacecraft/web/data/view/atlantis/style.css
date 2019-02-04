@@ -1,0 +1,101 @@
+table.main
+{
+	text-align:center;
+	width:80%;
+	height:80%;
+	border-collapse:collapse;
+}
+
+td.top
+{
+	height:100px;
+	font-size:36px;
+	text-align:center;
+	font-weight:bold;
+	vertical-align:middle;
+}
+
+td.topmenu
+{
+	text-align:center;
+	height:30px;
+}
+
+td.framed
+{
+	vertical-align:middle;
+	text-align:center;
+}
+
+td.menuitem
+{
+	vertical-align:middle;
+	text-align:center;
+	width:20%;
+	background-image:url(topmenu.png);
+	background-position:right;
+	background-color:#FF5200;
+}
+
+a.menu
+{
+	font-size:14px;
+	text-transform:uppercase;
+	color:#FFFFFF;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+td.left_panel
+{
+	width:10%;
+}
+
+td.text
+{
+	width:70%;
+	height:100%;
+	vertical-align:middle;
+}
+
+td.copyright
+{
+	height:30px;
+	vertical-align:middle;
+	text-align:center;
+}
+
+td.bottommenu
+{
+}
+
+html,body
+{
+	margin:0px;
+	padding:0px;
+}
+
+td
+{
+	padding:0px;
+}
+
+body,input,select,textarea
+{
+	background-color:#FFFFFF;
+}
+
+td,input,select,textarea,div
+{
+	font-family:Tahoma;
+	font-size:11px;
+	color:#FFFFFF;
+	vertical-align:top;
+}
+
+body
+{
+	background:#000000;
+	background-image:url(back.png);
+	background-repeat:no-repeat;
+}
