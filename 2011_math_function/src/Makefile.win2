@@ -1,0 +1,25 @@
+SRC=gmathematics.c .\tools\rglTexture.c .\tools\rglImage.c
+OBJ=$(SRC:.c=.o)
+EXE=gmathematics.exe
+
+CC=gcc
+C_STD=c99
+STD = -std=$(C_STD)
+INCS =  -Ic:\MinGW\include
+LIBS =-lmingw32 -mwindows -lglut32 -lglu32 -lopengl32 
+CFLAGS=-Wall -O2
+LDFLAGS=-Lc:\MinGW\lib $(LIBS)
+RM=rm
+
+%.o: %.c         # combined w/ next line will compile recently changed .c files
+	 $(CC) $(CFLAGS) -o $@ -c $<
+
+.PHONY : all     # .PHONY ignores files named all
+all: $(EXE)      # all is dependent on $(EXE) to be complete
+
+$(EXE): $(OBJ)   # $(EXE) is dependent on all of the files in $(OBJ) to exist
+	 $(CC) $(OBJ) $(LDFLAGS) -o $@
+
+.PHONY : clean   # .PHONY ignores files named clean
+clean:
+	-$(RM) $(OBJ) core    # '-' causes errors not to exit the process
