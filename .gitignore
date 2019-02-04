@@ -1,0 +1,30 @@
+.gitignore
+
+# Ignore objects and archives.
+*.[oa]
+*.ko
+
+# Libraries
+*.lib
+*.a
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+
+#Tempory foles
+*~
+
+#Derictories
+extern_doc/*
+extern_example/*
+extern_lib/*
+test/*
+lib/*
