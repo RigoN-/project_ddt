@@ -1,0 +1,13 @@
+name = SDL_phisic_demo
+CC = fpc
+LDFLAGS = -Fu./tools
+all:$(name)
+
+$name: $(name).o
+
+$(name):
+	$(CC) $(LDFLAGS) $(name).pas 
+	mv -f  $(name).exe ../bin
+	rm -f  $(name).o
+	rm -f ./tools/*.o
+	rm -f ./tools/*.ppu
