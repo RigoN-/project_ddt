@@ -1,0 +1,57 @@
+CC = gcc
+C_STD= c99
+STD = -std=$(C_STD)
+name = SDL_Bump_mapping
+TARGET = $(name).exe
+DEPEND = .depend
+INCS =  -Ic:\MinGW\include  -Ic:\MinGW\include\g++-3 -I..\include\win
+LDFLAGS = -L..\lib\win 
+CFLAGS = $(INCS) -Wall -O2
+LIBS = -lmingw32 -mwindows -lSDLmain  -ljpeg -lSDL -lSDL_image -lSDL_ttf -lglew32 -lglu32 -lopengl32    
+OBJ  = $(name).o ./tools/rglTexture.o ./tools/rglImage.o  ./tools/rglMesh3D.o  ./tools/rglShader.o ./tools/rglMaterial.o ./tools/rglMath3D.o ./tools/rglText.o ./tools/rglRender.o ./tools/rglInfo.o
+#OBJ  = $(name).o ./tools/rglTexture.o ./tools/rglImage.o ./tools/rglMath3D.o
+all: $(name).exe 
+
+./tools/rglTexture.o : ./tools/rglTexture.c 
+	$(CC) $(STD) $(CFLAGS) -c ./tools/rglTexture.c  -o  ./tools/rglTexture.o
+	
+./tools/rglImage.o :./tools/rglImage.c 
+	$(CC) $(STD) $(CFLAGS) -c ./tools/rglImage.c  -o ./tools/rglImage.o	
+
+./tools/rglMesh3D.o :./tools/rglMesh3D.c 
+	$(CC) $(STD) $(CFLAGS) -c ./tools/rglMesh3D.c  -o ./tools/rglMesh3D.o
+
+./tools/rglShader.o :./tools/rglShader.c 
+	$(CC) $(STD) $(CFLAGS) -c ./tools/rglShader.c  -o ./tools/rglShader.o	
+	
+./tools/rglMaterial.o :./tools/rglMaterial.c 
+	$(CC) $(STD) $(CFLAGS) -c ./tools/rglMaterial.c  -o ./tools/rglMaterial.o	
+
+./tools/rglMath3D.o :./tools/rglMath3D.c 
+	$(CC) $(STD) $(CFLAGS) -c ./tools/rglMath3D.c  -o ./tools/rglMath3D.o	
+
+./tools/rglText.o :./tools/rglText.c 
+	$(CC) $(STD) $(CFLAGS) -c ./tools/rglText.c  -o ./tools/rglText.o	
+
+./tools/rglTextglut.o : ./tools/rglTextglut.c 
+	$(CC) $(STD) $(CFLAGS) -c ./tools/rglTextglut.c  -o  ./tools/rglTextglut.o
+	
+./tools/rglRender.o :./tools/rglRender.c 
+	$(CC) $(STD) $(CFLAGS) -c ./tools/rglRender.c  -o ./tools/rglRender.o	
+	
+./tools/rglInfo.o :./tools/rglInfo.c 
+	$(CC) $(STD) $(CFLAGS) -c ./tools/rglInfo.c  -o ./tools/rglInfo.o	
+
+#./tools/glew.o :./tools/glew.c 
+#	$(CC) $(STD) $(CFLAGS) -c ./tools/glew.c -g -DGLEW_STATIC -o ./tools/glew.o
+
+
+$(TARGET): $(OBJ)
+	$(CC) $(STD) $(OBJ) -o $(name).exe $(LDFLAGS) $(LIBS) 
+#	move /y $(name).exe ..\bin
+#	del    *.o
+#	del   .\tools\*.o
+
+
+clean:
+	rm  -R -f  *.o

@@ -1,0 +1,86 @@
+Status: Using GLEW 1.5.2
+File '../data/shaders/BaseShaderMinTex.vs' is 176 long
+Compilation Vertex Shader: SUCCESSFUL
+File '../data/shaders/BaseShaderMinTex.fs' is 146 long
+Compilation Fragment Shader: SUCCESSFUL
+Link Shader Program:  SUCCESSFUL
+File '../data/shaders/parallax_0.vs' is 922 long
+Compilation Vertex Shader: SUCCESSFUL
+File '../data/shaders/parallax_0.fs' is 1245 long
+Compilation Fragment Shader: SUCCESSFUL
+Link Shader Program:  SUCCESSFUL
+File '../data/shaders/steep-parallax_mapping.vs' is 716 long
+Compilation Vertex Shader: SUCCESSFUL
+File '../data/shaders/steep-parallax_mapping.fs' is 670 long
+Compilation Fragment Shader: SUCCESSFUL
+Link Shader Program:  SUCCESSFUL
+File '../data/shaders/parallax-occlusion_mapping.vs' is 821 long
+Compilation Vertex Shader: SUCCESSFUL
+File '../data/shaders/parallax-occlusion_mapping.fs' is 1834 long
+Compilation Fragment Shader: SUCCESSFUL
+Link Shader Program:  SUCCESSFUL
+File '../data/shaders/Normal_mapping.vs' is 690 long
+Compilation Vertex Shader: SUCCESSFUL
+File '../data/shaders/Normal_mapping.fs' is 883 long
+Compilation Fragment Shader: SUCCESSFUL
+Link Shader Program:  SUCCESSFUL
+Image TGA load OK ../data/textures/rockwall.tga 
+Texture compressed size   128.00  Kb 
+Image size 768  Kb 
+Texture load OK!!! 
+Image TGA load OK ../data/textures/rockwall_height.tga 
+Texture compressed size    32.00  Kb 
+Image size 192  Kb 
+Texture load OK!!! 
+Image TGA load OK ../data/textures/rockwall_normal.tga 
+Texture compressed size    32.00  Kb 
+Image size 192  Kb 
+Texture load OK!!! 
+Image TGA load OK ../data/textures/rockwall_relief.tga 
+Texture compressed size    32.00  Kb 
+Image size 256  Kb 
+Texture load OK!!! 
+Image TGA load OK ../data/textures/title.tga 
+Texture compressed size    70.82  Kb 
+Image size 558  Kb 
+Texture load OK!!! 
+Image TGA load OK ../data/textures/author.tga 
+Texture compressed size    31.50  Kb 
+Image size 251  Kb 
+Texture load OK!!! 
+Image TGA load OK ../data/textures/c_plus.tga 
+Texture compressed size     5.62  Kb 
+Image size 44  Kb 
+Texture load OK!!! 
+Image TGA load OK ../data/textures/opengl_logo.tga 
+Texture compressed size     7.71  Kb 
+Image size 60  Kb 
+Texture load OK!!! 
+Image TGA load OK ../data/textures/SDL_logo.tga 
+Texture compressed size    60.20  Kb 
+Image size 474  Kb 
+Texture load OK!!! 
+Image TGA load OK ../data/textures/UbuntuLogo.tga 
+Texture compressed size    50.98  Kb 
+Image size 405  Kb 
+Texture load OK!!! 
+Image TGA load OK ../data/textures/linux_logo.tga 
+Texture compressed size    50.19  Kb 
+Image size 399  Kb 
+Texture load OK!!! 
+Image TGA load OK ../data/textures/footer.tga 
+Texture compressed size    33.77  Kb 
+Image size 263  Kb 
+Texture load OK!!! 
+Image JPG load OK ../data/textures/bricks_color_map.jpg 
+Texture compressed size   128.00  Kb 
+Image size 768  Kb 
+Texture load OK!!! 
+Image TGA load OK ../data/textures/bricks_height_map.tga 
+Texture compressed size   128.00  Kb 
+Image size 768  Kb 
+Texture load OK!!! 
+Image TGA load OK ../data/textures/bricks_normal_map.tga 
+Texture compressed size   128.00  Kb 
+Image size 1024  Kb 
+Texture load OK!!! 
