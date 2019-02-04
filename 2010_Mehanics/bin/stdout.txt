@@ -1,0 +1,186 @@
+Status: Using GLEW 1.5.2
+Ready for OpenGL 2.0
+File '../data/shaders/BaseShaderMinTex.vs' is 176 long
+Compilation Vertex Shader: SUCCESSFUL
+File '../data/shaders/BaseShaderMinTex.fs' is 146 long
+Compilation Fragment Shader: SUCCESSFUL
+Link Shader Program:  SUCCESSFUL
+File '../data/shaders/BaseShaderMin.vs' is 178 long
+Compilation Vertex Shader: SUCCESSFUL
+File '../data/shaders/BaseShaderMin.fs' is 88 long
+Compilation Fragment Shader: SUCCESSFUL
+Link Shader Program:  SUCCESSFUL
+File '../data/shaders/dirLightDiff.vs' is 624 long
+Compilation Vertex Shader: SUCCESSFUL
+File '../data/shaders/dirLightDiff.fs' is 231 long
+Compilation Fragment Shader: SUCCESSFUL
+Link Shader Program:  SUCCESSFUL
+File '../data/shaders/dirLightAmbDiff.vs' is 777 long
+Compilation Vertex Shader: SUCCESSFUL
+File '../data/shaders/dirLightAmbDiff.fs' is 208 long
+Compilation Fragment Shader: SUCCESSFUL
+Link Shader Program:  SUCCESSFUL
+File '../data/shaders/dirLightAmbDiffSpec.vs' is 1205 long
+Compilation Vertex Shader: SUCCESSFUL
+File '../data/shaders/dirLightAmbDiffSpec.fs' is 115 long
+Compilation Fragment Shader: SUCCESSFUL
+Link Shader Program:  SUCCESSFUL
+File '../data/shaders/dirLightAmbDiffSpecPix.vs' is 788 long
+Compilation Vertex Shader: SUCCESSFUL
+File '../data/shaders/dirLightAmbDiffSpecPix.fs' is 676 long
+Compilation Fragment Shader: SUCCESSFUL
+Link Shader Program:  SUCCESSFUL
+Image JPG load OK ../data/textures/yplastic.jpg 
+Texture compressed size   128.00  Kb 
+Image size 768  Kb 
+Texture load OK!!! 
+Image JPG load OK ../data/textures/stal.jpg 
+Texture compressed size   312.50  Kb 
+Image size 1875  Kb 
+Texture load OK!!! 
+Image JPG load OK ../data/textures/CAMARO.JPG 
+Texture compressed size    37.50  Kb 
+Image size 225  Kb 
+Texture load OK!!! 
+Image JPG load OK ../data/textures/gplastic.jpg 
+Texture compressed size   128.00  Kb 
+Image size 768  Kb 
+Texture load OK!!! 
+Image JPG load OK ../data/textures/shkala.jpg 
+Texture compressed size    32.00  Kb 
+Image size 192  Kb 
+Texture load OK!!! 
+Image JPG load OK ../data/textures/wplastic.jpg 
+Texture compressed size   128.00  Kb 
+Image size 768  Kb 
+Texture load OK!!! 
+Image JPG load OK ../data/textures/shkala2.jpg 
+Texture compressed size    44.88  Kb 
+Image size 268  Kb 
+Texture load OK!!! 
+Image BMP load OK ../data/textures/scena1/page1.1.bmp 
+Texture compressed size   164.00  Kb 
+Image size 979  Kb 
+Texture load OK!!! 
+Image BMP load OK ../data/textures/scena2/page2.1.bmp 
+Texture compressed size   164.00  Kb 
+Image size 979  Kb 
+Texture load OK!!! 
+Image BMP load OK ../data/textures/scena2/page3.1.bmp 
+Texture compressed size   164.00  Kb 
+Image size 979  Kb 
+Texture load OK!!! 
+Image BMP load OK ../data/textures/scena3/page4.1.bmp 
+Texture compressed size   164.00  Kb 
+Image size 979  Kb 
+Texture load OK!!! 
+Image BMP load OK ../data/textures/scena3/page5.1.bmp 
+Texture compressed size   164.00  Kb 
+Image size 979  Kb 
+Texture load OK!!! 
+Image BMP load OK ../data/textures/scena4/page6.1.bmp 
+Texture compressed size   164.00  Kb 
+Image size 979  Kb 
+Texture load OK!!! 
+Image BMP load OK ../data/textures/scena4/page7.1.bmp 
+Texture compressed size   164.00  Kb 
+Image size 979  Kb 
+Texture load OK!!! 
+Image BMP load OK ../data/textures/scena4/page7.1.bmp 
+Texture compressed size   164.00  Kb 
+Image size 979  Kb 
+Texture load OK!!! 
+Image BMP load OK ../data/textures/scena8/oblojka_2_back.bmp 
+Texture compressed size    88.32  Kb 
+Image size 527  Kb 
+Texture load OK!!! 
+Image BMP load OK ../data/textures/oblojka_1_face.bmp 
+Texture compressed size    88.32  Kb 
+Image size 527  Kb 
+Texture load OK!!! 
+Image BMP load OK ../data/textures/oblojka_1_back.bmp 
+Texture compressed size   194.00  Kb 
+Image size 1164  Kb 
+Texture load OK!!! 
+Splash texture init---------------------------------------------------------
+Image JPG load OK ../data/textures/formula01.jpg 
+Texture compressed size    64.00  Kb 
+Image size 384  Kb 
+Texture load OK!!! 
+Image JPG load OK ../data/textures/formula02.jpg 
+Texture compressed size    64.00  Kb 
+Image size 384  Kb 
+Texture load OK!!! 
+Image JPG load OK ../data/textures/formula03.jpg 
+Texture compressed size    64.00  Kb 
+Image size 384  Kb 
+Texture load OK!!! 
+Image JPG load OK ../data/textures/einstein.jpg 
+Texture compressed size    36.00  Kb 
+Image size 213  Kb 
+Texture load OK!!! 
+Image JPG load OK ../data/textures/faradey.jpg 
+Texture compressed size    35.50  Kb 
+Image size 211  Kb 
+Texture load OK!!! 
+Image JPG load OK ../data/textures/maxwell.jpg 
+Texture compressed size    36.50  Kb 
+Image size 217  Kb 
+Texture load OK!!! 
+Image JPG load OK ../data/textures/planck.jpg 
+Texture compressed size    36.00  Kb 
+Image size 213  Kb 
+Texture load OK!!! 
+Image JPG load OK ../data/textures/curie.jpg 
+Texture compressed size    36.50  Kb 
+Image size 217  Kb 
+Texture load OK!!! 
+Image JPG load OK ../data/textures/lenc.jpg 
+Texture compressed size    36.00  Kb 
+Image size 215  Kb 
+Texture load OK!!! 
+Image JPG load OK ../data/textures/newton.jpg 
+Texture compressed size    35.50  Kb 
+Image size 211  Kb 
+Texture load OK!!! 
+Image JPG load OK ../data/textures/Rezerford.jpg 
+Texture compressed size    36.50  Kb 
+Image size 217  Kb 
+Texture load OK!!! 
+Image JPG load OK ../data/textures/vavilov.jpg 
+Texture compressed size    36.50  Kb 
+Image size 217  Kb 
+Texture load OK!!! 
+Image JPG load OK ../data/textures/bor.jpg 
+Texture compressed size    36.00  Kb 
+Image size 214  Kb 
+Texture load OK!!! 
+Image TGA load OK ../data/textures/title_base0.tga 
+Texture compressed size   128.00  Kb 
+Image size 1024  Kb 
+Texture load OK!!! 
+Image TGA load OK ../data/textures/title_base1.tga 
+Texture compressed size   128.00  Kb 
+Image size 1024  Kb 
+Texture load OK!!! 
+Image JPG load OK ../data/textures/fon01.jpg 
+Texture compressed size    87.00  Kb 
+Image size 522  Kb 
+Texture load OK!!! 
+Image JPG load OK ../data/textures/fon02.jpg 
+Texture compressed size   101.00  Kb 
+Image size 601  Kb 
+Texture load OK!!! 
+Image TGA load OK ../data/textures/title_base2.tga 
+Texture compressed size     9.84  Kb 
+Image size 76  Kb 
+Texture load OK!!! 
+Image TGA load OK ../data/textures/devel1.tga 
+Texture compressed size    96.00  Kb 
+Image size 768  Kb 
+Texture load OK!!! 
+Image TGA load OK ../data/textures/devel2.tga 
+Texture compressed size    96.00  Kb 
+Image size 768  Kb 
+Texture load OK!!! 
+Splash texture load  OK---------------------------------------------------------

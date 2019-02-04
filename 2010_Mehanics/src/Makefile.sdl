@@ -1,0 +1,23 @@
+CC = gcc
+C_STD= c99
+STD = -std=$(C_STD)
+name = SDL_Phi_0_003
+TARGET = ../bin/$(name)
+DEPEND = .depend
+INCS = -I../include/linux
+LIBS=  -lGL  -lGLU -lSDL -lglut -ljpeg -lSDL_image -lSDL_ttf
+LDFLAGS =`/usr/bin/sdl-config --libs`  -L/usr/X11R6/lib  $(LIBS) 
+CFLAGS = $(INCS) `/usr/bin/sdl-config --cflags` -Wall -O2 -msse -msse2 -mfpmath=sse
+PROF = 
+OBJ = ./tools/rglTexture.o ./tools/rglImage.o  ./tools/rglMesh3D.o  ./tools/rglShader.o ./tools/rglMaterial.o ./tools/rglMath3D.o ./tools/rglText.o ./tools/rglRender.o ./tools/rglInfo.o ./tools/glew.o ./tools/rglScena_Draw_03.o ./tools/rglScena_Draw_01.o ./tools/rglScena_Draw_07.o ./tools/rglScena_Draw_14.o ./tools/rglScena_Draw_19.o ./tools/rglScena_Draw_18.o  ./tools/rglScena_Draw_book.o ./tools/rglFigures.o ./tools/rglSplash.o
+ 
+.c.o:
+	$(CC) $(STD) $(CFLAGS) -c $(PROF) -o $@ $<
+
+$(TARGET): $(name).o $(OBJ)
+	$(CC) $(STD) $(LDFLAGS) $^ $(PROF) -o   $@
+	rm  -R -f  *.o
+	rm  -R -f ./tools/*.o
+
+clean:
+	rm  -R -f  *.o

@@ -1,0 +1,84 @@
+CC = gcc
+C_STD= c99
+STD = -std=$(C_STD)
+name = SDL_Phi_0_003
+TARGET = $(name).exe
+DEPEND = .depend
+INCS =  -Ic:\MinGW\include  -Ic:\MinGW\include\c++
+LDFLAGS = -Lc:\MinGW\lib
+CFLAGS = $(INCS) -Wall -O2
+LIBS = -lmingw32 -mwindows -lSDLmain  -ljpeg -lSDL -lSDL_image -lSDL_ttf -lglew32 -lglu32 -lopengl32    
+OBJ  = $(name).o ./tools/rglTexture.o ./tools/rglImage.o  ./tools/rglMesh3D.o  ./tools/rglShader.o ./tools/rglMaterial.o ./tools/rglMath3D.o ./tools/rglText.o ./tools/rglRender.o ./tools/rglInfo.o ./tools/rglScena_Draw_03.o ./tools/rglScena_Draw_01.o ./tools/rglScena_Draw_07.o ./tools/rglScena_Draw_14.o ./tools/rglScena_Draw_19.o ./tools/rglScena_Draw_18.o ./tools/rglFigures.o ./tools/rglScena_Draw_book.o ./tools/rglSplash.o  
+#OBJ  = $(name).o ./tools/rglTexture.o ./tools/rglImage.o ./tools/rglMath3D.o
+all: $(name).exe 
+
+./tools/rglTexture.o : ./tools/rglTexture.c 
+	$(CC) $(STD) $(CFLAGS) -c ./tools/rglTexture.c  -o  ./tools/rglTexture.o
+	
+./tools/rglImage.o :./tools/rglImage.c 
+	$(CC) $(STD) $(CFLAGS) -c ./tools/rglImage.c  -o ./tools/rglImage.o	
+
+./tools/rglMesh3D.o :./tools/rglMesh3D.c 
+	$(CC) $(STD) $(CFLAGS) -c ./tools/rglMesh3D.c  -o ./tools/rglMesh3D.o
+
+./tools/rglShader.o :./tools/rglShader.c 
+	$(CC) $(STD) $(CFLAGS) -c ./tools/rglShader.c  -o ./tools/rglShader.o	
+	
+./tools/rglMaterial.o :./tools/rglMaterial.c 
+	$(CC) $(STD) $(CFLAGS) -c ./tools/rglMaterial.c  -o ./tools/rglMaterial.o	
+
+./tools/rglMath3D.o :./tools/rglMath3D.c 
+	$(CC) $(STD) $(CFLAGS) -c ./tools/rglMath3D.c  -o ./tools/rglMath3D.o	
+
+./tools/rglText.o :./tools/rglText.c 
+	$(CC) $(STD) $(CFLAGS) -c ./tools/rglText.c  -o ./tools/rglText.o	
+
+#./tools/rglTextglut.o : ./tools/rglTextglut.c 
+#	$(CC) $(STD) $(CFLAGS) -c ./tools/rglTextglut.c  -o  ./tools/rglTextglut.o
+	
+./tools/rglRender.o :./tools/rglRender.c 
+	$(CC) $(STD) $(CFLAGS) -c ./tools/rglRender.c  -o ./tools/rglRender.o	
+	
+./tools/rglInfo.o :./tools/rglInfo.c 
+	$(CC) $(STD) $(CFLAGS) -c ./tools/rglInfo.c  -o ./tools/rglInfo.o	
+	
+./tools/rglScena_Draw_03.o :./tools/rglScena_Draw_03.c 
+	$(CC) $(STD) $(CFLAGS) -c ./tools/rglScena_Draw_03.c   -o ./tools/rglScena_Draw_03.o
+
+./tools/rglScena_Draw_01.o :./tools/rglScena_Draw_01.c 
+	$(CC) $(STD) $(CFLAGS) -c ./tools/rglScena_Draw_01.c   -o ./tools/rglScena_Draw_01.o
+	
+./tools/rglScena_Draw_07.o :./tools/rglScena_Draw_07.c 
+	$(CC) $(STD) $(CFLAGS) -c ./tools/rglScena_Draw_07.c   -o ./tools/rglScena_Draw_07.o
+
+./tools/rglScena_Draw_14.o :./tools/rglScena_Draw_14.c 
+	$(CC) $(STD) $(CFLAGS) -c ./tools/rglScena_Draw_14.c   -o ./tools/rglScena_Draw_14.o
+
+./tools/rglScena_Draw_19.o :./tools/rglScena_Draw_19.c 
+	$(CC) $(STD) $(CFLAGS) -c ./tools/rglScena_Draw_19.c   -o ./tools/rglScena_Draw_19.o
+
+./tools/rglScena_Draw_18.o :./tools/rglScena_Draw_18.c 
+	$(CC) $(STD) $(CFLAGS) -c ./tools/rglScena_Draw_18.c   -o ./tools/rglScena_Draw_18.o
+	
+./tools/rglScena_Draw_book.o :./tools/rglScena_Draw_book.c 
+	$(CC) $(STD) $(CFLAGS) -c ./tools/rglScena_Draw_book.c   -o ./tools/rglScena_Draw_book.o
+
+./tools/rglFigures.o :./tools/rglFigures.c 
+	$(CC) $(STD) $(CFLAGS) -c ./tools/rglFigures.c   -o ./tools/rglFigures.o	
+
+./tools/rglSplash.o :./tools/rglSplash.c 
+	$(CC) $(STD) $(CFLAGS) -c ./tools/rglSplash.c   -o ./tools/rglSplash.o
+	
+#./tools/glew.o :./tools/glew.c 
+#	$(CC) $(STD) $(CFLAGS) -c ./tools/glew.c -g -DGLEW_STATIC -o ./tools/glew.o
+
+
+$(TARGET): $(OBJ)
+	$(CC) $(STD) $(OBJ) -o $(name).exe $(LDFLAGS) $(LIBS) 
+#	move /y $(name).exe ..\bin
+#	del    *.o
+#	del   .\tools\*.o
+
+
+clean:
+	rm  -R -f  *.o

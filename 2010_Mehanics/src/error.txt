@@ -1,0 +1,1 @@
+gcc -std=c99 `sdl-config --cflags` -Wall -O2 -Wall -O2 -c -o SDL_space.o SDL_space.c
