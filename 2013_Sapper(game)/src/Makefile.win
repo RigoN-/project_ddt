@@ -1,0 +1,13 @@
+name = sapper
+CC = fpc
+LDFLAGS = -Fu./tools -Fu../ex_libs/win
+all:$(name)
+
+$name: $(name).o
+
+$(name):
+	$(CC) $(LDFLAGS) $(name).pas 
+	mv -f  $(name).exe ../bin
+	rm -f  $(name).o
+	rm -f ./tools/*.o
+	rm -f ./tools/*.ppu
