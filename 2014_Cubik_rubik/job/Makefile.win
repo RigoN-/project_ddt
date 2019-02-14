@@ -1,0 +1,17 @@
+CC = gcc
+C_STD = gnu99
+STD = -std=$(C_STD)
+name = cubik_rubik
+TARGET = ../bin/$(name).exe
+INCS = -I"../extrn_include"
+CFLAGS = $(INCS) -Wall -O2 -msse -msse2 -mfpmath=sse
+LIBS = -lmingw32 -lopengl32 -lglfw3dll -lglew32 -lbass -lrglMathdll
+LDFLAGS = -L"../extrn_libs/win/GLEW" -L"../extrn_libs/win/GLFW" -L"../extrn_libs/win/BASS" -L"../extrn_libs/win/rglMath" $(LIBS)
+OBJ = ./src/lab_info.o ./src/lab_win.o ./src/lab_callback.o ./src/lab_ogl.o ./src/lab_main.o ./src/lab_texture.o ./src/lab_image.o
+
+%.o:%.c
+	$(CC) $(STD) $(CFLAGS) -c $< -o $@
+	
+$(TARGET):$(OBJ)
+	$(CC) $(STD) $^ -o $@ $(LDFLAGS)
+	del  .\src\*.o

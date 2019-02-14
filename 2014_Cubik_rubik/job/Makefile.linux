@@ -1,0 +1,20 @@
+CC = gcc
+C_STD= gnu99
+STD = -std=$(C_STD)
+name = cubik_rubik
+TARGET = ../bin/$(name)
+INCS =  -I"../extrn_include/"
+CFLAGS = $(INCS) -Wall -O2 -msse -msse2 -mfpmath=sse
+LIBS =  -lGL -lglfw -lGLEW -lbass -lm -lrt
+LDFLAGS = -L"." -L"../extrn_libs/lin/GLEW" -L"/usr/X11R6/lib"  -L"../extrn_libs/lin/GLFW" -L"../extrn_libs/lin/BASS" -Wl,-rpath,. $(LIBS)
+OBJ  = ./src/lab_info.o ./src/lab_win.o ./src/lab_callback.o ./src/lab_ogl.o ./src/lab_main.o ./src/lab_math3d.o ./src/lab_texture.o ./src/lab_image.o
+
+%.o:%.c
+	$(CC) $(STD) $(CFLAGS) -c $<  -o $@ 
+
+$(TARGET): $(OBJ)
+	$(CC) $(STD) $^ -o $@ $(LDFLAGS)
+	rm  -R -f  ./src/*.o
+	
+clean:
+	rm  -R -f  ./src/*.o
