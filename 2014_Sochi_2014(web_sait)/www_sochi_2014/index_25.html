@@ -1,0 +1,45 @@
+﻿<html>
+<head>
+<title>Layout</title>
+<link href="style/style1.css" rel="stylesheet"
+type="text/css">
+</head>
+<body>
+<div id="infa">
+ <table class="content">
+ <tr>
+<script type="text/javascript" src="jquery.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$("h2").append('<em></em>')
+
+	$(".thumbs a").click(function(){
+	
+		var largePath = $(this).attr("href");
+		var largeAlt = $(this).attr("title");
+		
+		$("#largeImg").attr({ src: largePath, alt: largeAlt });
+		
+		$("h2 em").html(" (" + largeAlt + ")"); return false;
+	});
+	
+});
+</script>
+<p><img id="largeImg" src="images/g-5.jpg" alt="Large image" /></p>
+<p class="text">
+ <h2 class="hdr2">Сноуборд</h2>
+<p class="text">
+Победитель: Вик Уайлд
+</p>
+<p class="text">
+Россиянин Вик Уайлд завоевал золото Олимпиады в Сочи в параллельном гигантском слаломе. В первом из двух финальных заездов он уступил Невину Гальмарини из Швейцарии 0,54 секунды, но во втором выиграл с запасом 2,14. Бронзовым призером Игр стал словенец Жан Кошир. Напомним, что в этот же день супруга Уайлда Алена Заварзина принесла России еще одну награду, завоевав бронзу в женских соревнованиях.
+</p>
+<a href=""></a>
+ </p>
+ </tr>
+ <div>
+ </table>
+ </body>
+</html> 

@@ -1,0 +1,46 @@
+﻿<html>
+<head>
+<title>Layout</title>
+<link href="style/style1.css" rel="stylesheet"
+type="text/css">
+</head>
+<body>
+<div id="infa">
+ <table class="content">
+ <tr>
+<script type="text/javascript" src="jquery.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$("h2").append('<em></em>')
+
+	$(".thumbs a").click(function(){
+	
+		var largePath = $(this).attr("href");
+		var largeAlt = $(this).attr("title");
+		
+		$("#largeImg").attr({ src: largePath, alt: largeAlt });
+		
+		$("h2 em").html(" (" + largeAlt + ")"); return false;
+	});
+	
+});
+</script>
+<p><img id="largeImg" src="images/g-1.jpg" alt="Large image" /></p>
+
+ <p class="text">
+ <h2 class="hdr2">Фигурное катание(парное катание)</h2>
+<p class=" text">
+Победители: Татьяна Волосожар и Максим Траньков (парное катание)
+</p>
+<p class=" text">
+Татьяна Волосожар и Максим Траньков стали двукратными олимпийскими чемпионами в Сочи, выиграв турнир и в парном катании. С учетом короткой программы они набрали 236,86 балла (84,17 + 152,69). Еще одни представители России – Ксения Столбова и Федор Климов (218,68) – стали серебряными призерами Игр-2014.
+</p>
+<a href=""></a>
+ </p>
+ </tr>
+ <div>
+ </table>
+ </body>
+</html> 

@@ -1,0 +1,46 @@
+﻿<html>
+<head>
+<title>Layout</title>
+<link href="style/style1.css" rel="stylesheet"
+type="text/css">
+</head>
+<body>
+<div id="infa">
+ <table class="content">
+ <tr>
+<script type="text/javascript" src="jquery.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$("h2").append('<em></em>')
+
+	$(".thumbs a").click(function(){
+	
+		var largePath = $(this).attr("href");
+		var largeAlt = $(this).attr("title");
+		
+		$("#largeImg").attr({ src: largePath, alt: largeAlt });
+		
+		$("h2 em").html(" (" + largeAlt + ")"); return false;
+	});
+	
+});
+</script>
+<p><img id="largeImg" src="images/g-10.jpg" alt="Large image" /></p>
+<p class="text">
+ <h2 class="hdr2">Биатлон</h2>
+<p class="text">
+Победитель: Алексей Волков, Евгений Устюгов, Дмитрий Малышко, Антон Шипулин (эстафета)
+</p>
+<p class="text">
+Российская четверка выиграла эстафету 4x7,5 км. Это первое золото для отечественных биатлонистов-мужчин в эстафетной гонке после Олимпиады 1988 года.
+
+</p>
+<a href=""></a>
+ </p>
+ </tr>
+ <div>
+ </table>
+ </body>
+</html> 

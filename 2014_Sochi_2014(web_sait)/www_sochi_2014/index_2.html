@@ -1,0 +1,332 @@
+<html>
+<head>
+<title>Layout</title>
+
+<link href="style/style1.css" rel="stylesheet"type="text/css">
+<link href="style/style.css" rel="stylesheet"type="text/css">
+<link href="style/new3.css" rel="stylesheet"type="text/css">
+
+
+<script type="text/javascript" src="js/jquery.js"></script>
+
+<script type="text/javascript" src="js/a.html"></script>
+<script type="text/javascript" src="js/apu.js"></script>
+
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$("h2").append('<em></em>')
+
+	$(".thumbs a").click(function(){
+	
+		var largePath = $(this).attr("href");
+		var largeAlt = $(this).attr("title");
+		
+		$("#largeImg").attr({ src: largePath, alt: largeAlt });
+		
+		$("h2 em").html(" (" + largeAlt + ")"); return false;
+	});
+	
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	
+	//hide message_body after the first one
+	$(".message_list .message_body:gt(0)").hide();
+	
+	//hide message li after the 5th
+	$(".message_list li:gt(15)").hide();
+
+	
+	//toggle message_body
+	$(".message_head").click(function(){
+		$(this).next(".message_body").slideToggle(500)
+		return false;
+	});
+
+	//collapse all messages
+	$(".collpase_all_message").click(function(){
+		$(".message_body").slideUp(500)
+		return false;
+	});
+
+	//show all messages
+	$(".show_all_message").click(function(){
+		$(this).hide()
+		$(".show_recent_only").show()
+		$(".message_list li:gt(4)").slideDown()
+		return false;
+	});
+
+	//show recent messages only
+	$(".show_recent_only").click(function(){
+		$(this).hide()
+		$(".show_all_message").show()
+		$(".message_list li:gt(4)").slideUp()
+		return false;
+	});
+
+});
+</script>
+
+<script>
+$( function ready() {
+$('#outputinfa').load( "forindex5.html #infa1"); $('#d1').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "content2.html #infa1");});
+$('#id0').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_3.html #infa");});
+$('#id1').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_4.html #infa");});
+$('#id2').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_5.html #infa");});
+$('#id3').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_6.html #infa");});
+$('#id4').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_7.html #infa");});
+$('#id5').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_8.html #infa");});
+$('#id6').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_9.html #infa");});
+$('#id7').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_10.html #infa");});
+$('#id8').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_11.html #infa");});
+$('#id9').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_12.html #infa");});
+$('#id10').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_13.html #infa");});
+$('#id11').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_14.html #infa");});
+$('#id12').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_15.html #infa");});
+$('#id13').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_16.html #infa");});
+ });//END
+
+</script>
+
+
+
+
+
+
+
+</head>
+<body>
+<table class="main" border="1">
+	<tr>
+		<td class="top" colspan="3">
+			<table class="main">
+				<tr>
+					
+					<td class="logo"><img src="images/logo.gif" width="206"
+						height="140" border="0"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+<tr>
+<td class="search">
+	<form action="">
+		<table class="main">
+			<tr>
+				<td class="searchitem hdr">Поиск</td>
+				<td class="searchitem" width="100%"><input type="text"
+				name="Search" style="width: 100%"></td>
+				<td class="searchitem"><input type="image" src="images/button.jpg"
+					width="22" height="39" border="0"></td>
+			</tr>
+		</table>
+	</form>
+</td>
+
+
+<td class="topmenu" colspan="3">
+	<table class="main">
+		<tr>
+		
+                 	<td class="menuitem"><a  class="menu" id="d1" href="">главное</a></td>
+	            <td class="menuitem"><a class="menu" href="">новости,истории</a></td> 
+			<td class="menuitem"><a class="menu" href="">конькобежный спорт</a></td>
+			<td class="menuitem"><a class="menu" href="">лыжи</a></td>
+			<td class="menuitem"><a class="menu" href="">бобслей,сани</a></td>
+			<td class="menuitem"><a  class="menu" id="d2" href="">игры на льду</a></td>
+		
+		</tr>
+	</table>
+</td>
+</tr>
+		<tr>
+		<td class="shadowleft"><img src="images/shadowleftpic.jpg"
+		width="6" height="5" border="0"></td>
+	   <td class="shadowright"><img src="images/shadowrightpic.jpg"
+		width="7" height="5" border="0"></td>
+		</tr>
+
+<tr>
+
+<td class="news">
+	<table class="newstable" cellspacing="5">
+	<tr>
+	</tr>
+	</table>
+
+	<table class="hdrtab">
+	<tr>
+	<td class="hdr">Новости</td>
+	</tr>
+	</table>
+	4 картинки со сменой 
+	
+</td>
+
+
+
+
+<td class="text">
+
+
+ <div id="outputinfa" > </div>
+</td>
+
+<td class="news"> 
+
+
+<div  id="slide_menu" >
+
+<ol class="message_list">
+
+	<li>
+    	<p class="message_head"><cite>Биaтлон:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">		
+		<p></p>
+		</br>
+		
+						<a id="id0"href=""><img class="border" src="images/1_1.jpg" width="135" height="94" border="0"></a>
+		
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Бобслей:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<p></p>
+		</br>
+			<a id="id1"href=""><img class="border" src="images/1_2.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Горнолыжный спорт:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<p></p>
+		</br>
+		<a id="id2"href=""><img class="border" src="images/1_3.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Керлинг:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<p></p>
+		</br>
+		 <a id="id3"href=""><img class="border"src="images/1_4.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Конькобежный спорт:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<p></p>
+		</br>
+		<a id="id4"href=""><img class="border"src="images/1_5.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Лыжные гонки:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<p></p>
+		</br>
+			<a id="id5"href=""><img class="border"src="images/1_7.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Прыжки с трамплина:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<p></p>
+		</br>
+			<a id="id6"href=""><img class="border"src="images/1_8.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Санный спорт:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+	    <p></p>
+		</br>
+			<a id="id7"href=""><img class="border"
+ src="images/1_9.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Скелетон:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<p></p>
+		</br>
+			<a id="id8"href=""><img class="border"
+ src="images/1_10.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Сноуборд:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<p></p>
+		</br>
+			<a id="id9"href=""><img class="border"
+ src="images/1_11.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Фигурное катание:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<p></p>
+		</br>
+	<a id="id10"href=""><img class="border"
+ src="images/1_12.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+
+	<li>
+		<p class="message_head"><cite>Фристайл:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<p></p>
+		</br>
+			<a id="id11" href=""><img class="border"
+ src="images/1_13.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Хоккей:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<p></p>
+		</br>
+			<a id="id12"href=""><img class="border"
+ src="images/1_14.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Шорт трек:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<p></p>
+		</br>
+		<a id="id13" href=""><img class="border"
+ src="images/1_15.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	
+</ol>
+ </div>
+
+
+
+</td>
+
+
+</tr>
+<tr>
+<td class="copyright">
+<table class="main">
+<tr>
+<td class="cprghtitem">Copyright©
+RealErtateCompany.com</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html> 

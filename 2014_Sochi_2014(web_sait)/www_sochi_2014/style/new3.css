@@ -1,0 +1,146 @@
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	padding: 0 0 1em;
+	text-indent: 25px;
+}
+/* message display page */
+.message_list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 290px;
+}
+.message_list li {
+	padding: 0;
+	margin: 0;
+	background: url(../images/message-bar.gif) no-repeat;
+}
+.message_head {
+	padding: 5px 10px;
+	cursor: pointer;
+	position: relative;
+    color: #3258ad
+}
+.message_head .timestamp {
+	color: #666666;
+	font-size: 95%;
+	position: absolute;
+	right: 10px;
+	top: 5px;
+}
+.message_head cite {
+	font-size: 100%;
+	font-weight: bold;
+	font-style: normal;
+}
+.message_body {
+	padding: 5px 10px 15px;
+}
+
+/* left*/
+.message_list2 {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 290px;
+}
+.message_list2 li {
+	padding: 0;
+	margin: 0;
+	background: url(../images/message-bar.gif) no-repeat;
+}
+.message_head2 {
+	padding: 5px 10px;
+	cursor: pointer;
+	position: relative;
+    color: #3258ad
+}
+.message_head2 .timestamp {
+	color: #666666;
+	font-size: 95%;
+	position: absolute;
+	right: 10px;
+	top: 5px;
+}
+.message_head2 cite {
+	font-size: 100%;
+	font-weight: bold;
+	font-style: normal;
+}
+.message_body2 {
+	padding: 5px 10px 15px;
+}
+
+
+
+
+.collapse_buttons {
+	text-align: right;
+	border-top: solid 1px #e4e4e4;
+	padding: 5px 0;
+	width: 383px;
+}
+.collapse_buttons a {
+	margin-left: 15px;
+	float: right;
+}
+.show_all_message {
+	background: url(../images/tall-down-arrow.gif) no-repeat right center;
+	padding-right: 12px;
+}
+.show_recent_only {
+	display: none;
+	background: url(../images/tall-up-arrow.gif) no-repeat right center;
+	padding-right: 12px;
+}
+.collpase_all_message {
+	background: url(../images/collapse-all.gif) no-repeat right center;
+	padding-right: 12px;
+	color: #666666;
+}body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+        min-width: 1020px;
+}
+
+
+
+#linki
+{
+	font-family: Verbana,Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	font-variant: normal;
+	color: #6c6c6c;
+	vertical-align: top;
+	padding: 50px;
+        margin-left: 250px;
+        margin-top: 20px;
+        border: 5px solid #dddddd;
+        border-radius: 10px;
+       -moz-border-radius: 10px;
+       -webkit-border-radius: 10px;
+        background-color: #00ff00;
+         width:400px;
+}
+
+#outputinfa
+{
+	font-family: Verbana,Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	font-weight: normal;
+	font-variant: normal;
+	color: #6c6c6c;
+	vertical-align: top;
+	padding: 30px;
+        margin-left: 50px;
+        text-align: justify;
+}
+

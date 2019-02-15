@@ -1,0 +1,639 @@
+<html>
+<head>
+<title>Layout</title>
+
+ <link href="style/jquery.pictureMenu.css" rel="stylesheet" type="text/css" />
+
+<link href="style/style1.css" rel="stylesheet"type="text/css">
+<link href="style/style2.css" rel="stylesheet"type="text/css">
+<link href="style/style.css" rel="stylesheet"type="text/css">
+<link href="style/new3.css" rel="stylesheet"type="text/css">
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/a.html"></script>
+<script type="text/javascript" src="js/apu.js"></script>
+
+<script src="js/jquery.pictureMenu.js" type="text/javascript"></script>
+<script src="js/jquery.cookie.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+        $(document).ready(function() {
+            $(".MainMenu1").pictureMenu();
+            $(".MainMenu2").pictureMenu({
+                animateTime: 600,
+                menuInactiveHide: 0.2,
+                menuActiveWidth: 600,
+                useMenuActiveWidth: true
+            });
+            $(".MainMenu3").pictureMenu({
+                menuHeight: 150,               
+                menuInactiveHide: 0.5,
+                menuBorder: 0,
+                useMenuWidth: false,
+			//	useMenuWidth: true,	
+				menuAutoOpen: 3,	
+				leaveActiveOpen: true,		
+				
+            });
+            $(".MainMenu4").pictureMenu({
+				menuHeight: 200, 
+                animateTime: 600,
+                menuInactiveHide: 0.5,
+                menuWidthHover: 95,
+                menuWidth: 180,
+                menuActiveWidth: 270,
+                useMenuWidth: true,
+                useMenuActiveWidth: true,            
+                
+            });
+            $(".MainMenu5").pictureMenu({
+                menuHeight: 200,
+                animateTime: 600,
+                menuInactiveHide: 0.8,
+                menuWidthHover: 75,
+                menuAutoOpen: 3,
+                 menuActiveWidth: 270,
+                  useMenuActiveWidth: true,
+                leaveActiveOpen: true,
+                leaveActiveOpenCookie: true
+            });
+            $(".MainMenu6").pictureMenu({
+                menuHeight: 200,
+                menuInactiveHide: 0.7,
+                menuWidthHover: 75,
+                menuAutoOpen: 1,
+                leaveActiveOpen: true
+            });
+        });
+ </script>
+
+
+</head>
+<body>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$("h2").append('<em></em>')
+
+	$(".thumbs a").click(function(){
+	
+		var largePath = $(this).attr("href");
+		var largeAlt = $(this).attr("title");
+		
+		$("#largeImg").attr({ src: largePath, alt: largeAlt });
+		
+		$("h2 em").html(" (" + largeAlt + ")"); return false;
+	});
+	
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	
+	//hide message_body after the first one
+	$(".message_list .message_body:gt(0)").hide();
+	
+	//hide message li after the 5th
+	$(".message_list li:gt(15)").hide();
+
+	
+	//toggle message_body
+	$(".message_head").click(function(){
+		$(this).next(".message_body").slideToggle(500)
+		return false;
+	});
+
+	//collapse all messages
+	$(".collpase_all_message").click(function(){
+		$(".message_body").slideUp(500)
+		return false;
+	});
+
+	//show all messages
+	$(".show_all_message").click(function(){
+		$(this).hide()
+		$(".show_recent_only").show()
+		$(".message_list li:gt(4)").slideDown()
+		return false;
+	});
+
+	//show recent messages only
+	$(".show_recent_only").click(function(){
+		$(this).hide()
+		$(".show_all_message").show()
+		$(".message_list li:gt(4)").slideUp()
+		return false;
+	});
+
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	
+	//hide message_body after the first one
+	$(".message_list2 .message_body2:gt(0)").hide();
+	
+	//hide message li after the 5th
+	$(".message_list2 li:gt(15)").hide();
+
+	
+	//toggle message_body
+	$(".message_head2").click(function(){
+		$(this).next(".message_body2").slideToggle(500)
+		return false;
+	});
+
+	//collapse all messages
+	$(".collpase_all_message").click(function(){
+		$(".message_body2").slideUp(500)
+		return false;
+	});
+
+	//show all messages
+	$(".show_all_message").click(function(){
+		$(this).hide()
+		$(".show_recent_only").show()
+		$(".message_list2 li:gt(4)").slideDown()
+		return false;
+	});
+
+	//show recent messages only
+	$(".show_recent_only").click(function(){
+		$(this).hide()
+		$(".show_all_message2").show()
+		$(".message_list li:gt(4)").slideUp()
+		return false;
+	});
+
+});
+
+function start_load() {
+   $('#outputinfa').load( "index_33.html");
+} 
+window.onload = start_load;
+</script>
+
+<script>
+$( function ready() {
+$('#outputinfa').load( "forindex5.html #infa1"); $('#id16').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "content2.html #infa1");});
+$('#id0').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_3.html");});
+$('#id1').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_4.html");});
+$('#id2').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_5.html");});
+$('#id3').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_6.html");});
+$('#id4').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_7.html");});
+$('#id5').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_8.html");});
+$('#id6').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_9.html");});
+$('#id7').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_10.html");});
+$('#id8').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_11.html");});
+$('#id9').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_12.html");});
+$('#id10').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_13.html");});
+$('#id11').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_14.html");});
+$('#id12').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_15.html");});
+$('#id13').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_16.html");});
+ });//END
+
+</script>
+
+<script>
+$( function ready() {
+$('#outputinfa').load( "forindex5.html #infa1"); $('#d15').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "content2.html #infa1");});
+$('#d1').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_20.html");});
+$('#d2').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_21.html");});
+$('#d3').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_22.html");});
+$('#d4').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_23.html");});
+$('#d5').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_24.html");});
+$('#d6').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_25.html");});
+$('#d7').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_26.html");});
+$('#d8').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_27.html");});
+$('#d9').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_28.html");});
+$('#d10').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_29.html");});
+$('#d11').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_30.html");});
+$('#d12').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_31.html");});
+$('#d13').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "index_32.html");});
+ });//END
+
+</script>
+
+<table class="main" border="0">
+	<tr>
+		<td class="top" colspan="3">
+			<table class="main">
+				<tr>
+					
+					<td class="logo"><img src="images/logo.gif" width="206"
+						height="140" border="0"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	
+	<tr>
+
+<td class="topmenu" colspan="3">
+	
+	                <div class="MainMenu4">
+                    <div>
+						
+                        <img src="img/r-01.jpg"  height="150" width="480" alt=""/>
+                      
+                    
+                        
+                    </div>
+                    <div>
+						
+                         <img  src="img/r-02.jpg" />
+                       
+                  
+                    </div>
+                    <div>
+						<a href="#">
+                         <img src="img/r-03.jpg" />
+                        </a>
+                  
+                    </div>
+                    <div>
+						
+                         <img src="img/r-04.jpg" />
+                       
+                   
+                    </div>
+                    <div>
+					
+                        <img src="img/r-05.jpg" />
+                    
+               
+                    </div>
+                    <div>
+						
+                        <img src="img/r-06.jpg" />
+                        
+                   
+                    </div>
+                     <div>
+						
+                        <img src="img/r-07.jpg" />
+                      
+                      
+                        
+                    </div>
+                    <div>
+					
+                         <img src="img/r-08.jpg" />
+                        
+                    </div>
+                    <div>
+						
+                         <img src="img/r-09.jpg" />
+                        
+                        
+                    </div>
+                    <div>
+						
+                         <img src="img/r-10.jpg" />
+                    
+                     
+                    </div>
+                    <div>
+						
+                        <img src="img/r-11.jpg" />
+                       
+                   
+                    </div>
+                    <div>
+						
+                        <img src="img/r-12.jpg" />
+                        
+                    </div>
+                    <div>
+						
+                        <img src="img/r-13.jpg" />
+                        
+                        
+                    </div>
+					<div>
+						
+                       <img src="img/r-14.jpg" />
+                      
+                    
+                    </div>
+					<div>
+						
+                        <img src="img/r-15.jpg" />
+                        
+                        
+                    </div>
+					<div>
+						
+                        <img src="img/r-16.jpg" />
+                        
+                        
+                    </div>
+					<div>
+						
+                        <img src="img/r-17.jpg" />
+                        
+                        
+                    </div>
+                </div>
+            </div>
+		              
+</td>
+</tr>
+	
+	
+<tr>
+
+
+
+<td class="topmenu" colspan="3">
+	
+</td>
+</tr>
+		
+
+<tr>
+
+<td class="news">
+	
+	<div  id="slide_menu" >
+
+<ol class="message_list2">
+
+	<li>
+		<p class="message_head2"><cite>Фигурное катание(командный утрнир):</cite> <span class="timestamp"></span></p>
+		<div class="message_body2">
+		<p></p>
+		</br>
+		<a id="d1"href=""><img class="border" src="images/100.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head2"><cite>Фигурное катание(парное):</cite> <span class="timestamp"></span></p>
+		<div class="message_body2">
+		<p></p>
+		</br>
+		<a id="d2"href=""><img class="border" src="images/g-1.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head2"><cite>Шорт-трек:</cite> <span class="timestamp"></span></p>
+		<div class="message_body2">
+		<p></p>
+		</br>
+		<a id="d3"href=""><img class="border" src="images/g-2.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head2"><cite>Скелетон:</cite> <span class="timestamp"></span></p>
+		<div class="message_body2">
+		<p></p>
+		</br>
+		 <a id="d4"href=""><img class="border"src="images/g-3.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head2"><cite>Бобслей(двойка):</cite> <span class="timestamp"></span></p>
+		<div class="message_body2">
+		<p></p>
+		</br>
+		<a id="d5"href=""><img class="border"src="images/g-4.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head2"><cite>Сноуборд:</cite> <span class="timestamp"></span></p>
+		<div class="message_body2">
+		<p></p>
+		</br>
+			<a id="d6"href=""><img class="border"src="images/g-5.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head2"><cite>Фигурное катание:</cite> <span class="timestamp"></span></p>
+		<div class="message_body2">
+		<p></p>
+		</br>
+			<a id="d7"href=""><img class="border"src="images/g-6.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head2"><cite>Шорт-трек:</cite> <span class="timestamp"></span></p>
+		<div class="message_body2">
+	    <p></p>
+		</br>
+			<a id="d8"href=""><img class="border"
+ src="images/g-7.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head2"><cite>Шорт-трек(эстафета):</cite> <span class="timestamp"></span></p>
+		<div class="message_body2">
+		<p></p>
+		</br>
+			<a id="d9"href=""><img class="border"
+ src="images/g-8.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head2"><cite>Сноуборд:</cite> <span class="timestamp"></span></p>
+		<div class="message_body2">
+		<p></p>
+		</br>
+			<a id="d10"href=""><img class="border"
+ src="images/g-9.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head2"><cite>Биатлон:</cite> <span class="timestamp"></span></p>
+		<div class="message_body2">
+		<p></p>
+		</br>
+	<a id="d11"href=""><img class="border"
+ src="images/g-10.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+
+	<li>
+		<p class="message_head2"><cite>Лыжные гонки:</cite> <span class="timestamp"></span></p>
+		<div class="message_body2">
+		<p></p>
+		</br>
+			<a id="d12" href=""><img class="border"
+ src="images/g-11.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head2"><cite>Бобслей(четверка):</cite> <span class="timestamp"></span></p>
+		<div class="message_body2">
+		<p></p>
+		</br>
+			<a id="d13"href=""><img class="border"
+ src="images/g-12.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	
+	</ol>
+ </div>
+</td>
+
+
+
+
+<td class="text">
+
+
+ <div id="outputinfa" > </div>
+</td>
+
+<td class="news"> 
+
+
+<div  id="slide_menu" >
+
+<ol class="message_list">
+
+	<li>
+    	<p class="message_head"><cite>Биатлон:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">		
+		<p></p>
+		</br>
+		
+						 <a id="id0"href=""><img class="border" src="images/1_1.jpg" width="135" height="94" border="0"></a>
+		
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Бобслей:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<p></p>
+		</br>
+			 <a id="id1"href=""><img class="border" src="images/1_2.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Горнолыжный спорт:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<p></p>
+		</br>
+		<a id="id2"href=""><img class="border" src="images/1_3.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Керлинг:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<p></p>
+		</br>
+		 <a id="id3"href=""><img class="border"src="images/1_4.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Конькобежный спорт:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<p></p>
+		</br>
+		<a id="id4"href=""><img class="border"src="images/1_5.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Лыжные гонки:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<p></p>
+		</br>
+			<a id="id5"href=""><img class="border"src="images/1_7.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Прыжки с трамплина:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<p></p>
+		</br>
+			<a id="id6"href=""><img class="border"src="images/1_8.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Санный спорт:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+	    <p></p>
+		</br>
+			<a id="id7"href=""><img class="border"
+ src="images/1_9.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Скелетон:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<p></p>
+		</br>
+			<a id="id8"href=""><img class="border"
+ src="images/1_10.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Сноуборд:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<p></p>
+		</br>
+			<a id="id9"href=""><img class="border"
+ src="images/1_11.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Фигурное катание:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<p></p>
+		</br>
+	<a id="id10"href=""><img class="border"
+ src="images/1_12.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+
+	<li>
+		<p class="message_head"><cite>Фристайл:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<p></p>
+		</br>
+			<a id="id11" href=""><img class="border"
+ src="images/1_13.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Хоккей:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<p></p>
+		</br>
+			<a id="id12"href=""><img class="border"
+ src="images/1_14.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Шорт трек:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<p></p>
+		</br>
+		<a id="id13" href=""><img class="border"
+ src="images/1_15.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	
+</ol>
+ </div>
+
+<tr>
+<td class="copyright">
+<table class="main">
+<tr>
+<td class="cprghtitem">Волошинский Влад;
+Волошинский Ярик© </td>
+</tr>
+</table>
+</td>
+</tr>
+
+</td>
+
+
+</table>
+</body>
+</html> 

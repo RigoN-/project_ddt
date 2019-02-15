@@ -1,0 +1,45 @@
+﻿<html>
+<head>
+<title>Layout</title>
+<link href="style/style1.css" rel="stylesheet"
+type="text/css">
+</head>
+<body>
+<div id="infa">
+ <table class="content">
+ <tr>
+<script type="text/javascript" src="jquery.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$("h2").append('<em></em>')
+
+	$(".thumbs a").click(function(){
+	
+		var largePath = $(this).attr("href");
+		var largeAlt = $(this).attr("title");
+		
+		$("#largeImg").attr({ src: largePath, alt: largeAlt });
+		
+		$("h2 em").html(" (" + largeAlt + ")"); return false;
+	});
+	
+});
+</script>
+<p><img id="largeImg" src="images/g-11.jpg" alt="Large image" /></p>
+<p class="text">
+ <h2 class="hdr2">Лыжные гонки</h2>
+<p class="text">
+Победитель: Александр Легков
+</p>
+<p class="text">
+Российские лыжники триумфально завершили мужской лыжный масс-старт на 50 км, заняв весь пьедестал почета. Олимпийским чемпионом стал Александр Легков – его время 1:46.55,2. Серебро завоевал Максим Вылегжанин, бронзу – Илья Черноусов. Таким образом, у России стало 12 золотых медалей, что обеспечило ей досрочную победу в общекомандном медальном зачете на домашних Олимпийских играх в Сочи.
+</p>
+<a href=""></a>
+ </p>
+ </tr>
+ <div>
+ </table>
+ </body>
+</html> 

@@ -1,0 +1,180 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="style/new3.css" rel="stylesheet" type="text/css">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Collapsible Message Panels</title>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function(){
+	
+	//hide message_body after the first one
+	$(".message_list .message_body:gt(0)").hide();
+	
+	//hide message li after the 5th
+	$(".message_list li:gt(15)").hide();
+
+	
+	//toggle message_body
+	$(".message_head").click(function(){
+		$(this).next(".message_body").slideToggle(500)
+		return false;
+	});
+
+	//collapse all messages
+	$(".collpase_all_message").click(function(){
+		$(".message_body").slideUp(500)
+		return false;
+	});
+
+	//show all messages
+	$(".show_all_message").click(function(){
+		$(this).hide()
+		$(".show_recent_only").show()
+		$(".message_list li:gt(4)").slideDown()
+		return false;
+	});
+
+	//show recent messages only
+	$(".show_recent_only").click(function(){
+		$(this).hide()
+		$(".show_all_message").show()
+		$(".message_list li:gt(4)").slideUp()
+		return false;
+	});
+
+});
+
+</script> 
+<script>
+$( function ready() {
+ $('#outputinfa').load( "forindex5.html #infa1");
+ $('#d1').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "content.html #infa1");});
+
+ });//END
+
+</script>
+
+
+</head>
+<body>
+<div id="infa1">
+<ol class="message_list">
+
+	<li>
+    	<p class="message_head"><cite>Биaтлон:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">		
+		<br />
+						<a href=""><img class="border" src="images/1_1.jpg" width="135" height="94" border="0"></a>
+		
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Бобслей:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<br />
+			<a href=""><img class="border" src="images/1_2.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Горнолыжный спорт:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<br />
+			<a href=""><img class="border" src="images/1_3.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Керлинг:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<br />
+			<a href=""><img class="border"
+ src="images/1_4.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Конькобежный спорт:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<br />
+			<a href=""><img class="border"
+ src="images/1_5.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Лыжные гонки:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<br />
+			<a href=""><img class="border"
+ src="images/1_7.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Прыжки с трамплина:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<br />
+			<a href=""><img class="border"
+ src="images/1_8.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Санный спорт:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<br />
+			<a href=""><img class="border"
+ src="images/1_9.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Скелетон:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<br />
+			<a href=""><img class="border"
+ src="images/1_10.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Сноуборд:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<br />
+			<a href=""><img class="border"
+ src="images/1_11.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Фигурное катание:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<br />
+			<a href=""><img class="border"
+ src="images/1_12.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+
+	<li>
+		<p class="message_head"><cite>Фристайл:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<br />
+			<a href=""><img class="border"
+ src="images/1_13.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Хоккей:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<br />
+			<a href=""><img class="border"
+ src="images/1_14.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Шорт трек:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<br />
+			<a href=""><img class="border"
+ src="images/1_15.jpg" width="135" height="94" border="0"></a>
+		</div>
+	</li>
+	
+</ol>
+</div >
+</body>
+</html>

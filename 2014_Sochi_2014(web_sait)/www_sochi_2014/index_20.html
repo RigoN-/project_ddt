@@ -1,0 +1,46 @@
+﻿<html>
+<head>
+<title>Layout</title>
+<link href="style/style1.css" rel="stylesheet"
+type="text/css">
+</head>
+<body>
+<div id="infa">
+ <table class="content">
+ <tr>
+<script type="text/javascript" src="jquery.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$("h2").append('<em></em>')
+
+	$(".thumbs a").click(function(){
+	
+		var largePath = $(this).attr("href");
+		var largeAlt = $(this).attr("title");
+		
+		$("#largeImg").attr({ src: largePath, alt: largeAlt });
+		
+		$("h2 em").html(" (" + largeAlt + ")"); return false;
+	});
+	
+});
+</script>
+<p><img id="largeImg" src="images/101.jpg" alt="Large image" /></p>
+
+ <p class="text">
+ <h2 class="hdr2">Фигурное катание(командный турнир)</h2>
+<p class=" text">
+Победители: Евгений Плющенко, Юлия Липницкая, Елена Ильиных/Никита Кацалапов, Татьяна Волосожар/Максим Траньков, Ксения Столбова/Федор Климов, Екатерина Боброва/Дмитрий Соловьев (командный турнир)
+</p>
+<p class=" text">
+Сборная России по фигурному катанию завоевала золото в командном турнире олимпийского турнира, который проводился впервые на Олимпиадах. После восьми видов команда в составе Юлии Липницкой, Евгения Плющенко, дуэтов Татьяны Волосожар и Максима Транькова, Ксении Столбовой и Федора Климова, Екатерины Бобровой и Дмитрия Соловьева, Елены Ильиных и Никиты Кацалапова набрала 75 баллов. Второе место осталось за канадскими фигуристами – 65 баллов, третье – за сборной США с 60 набранными очками.
+</p>
+<a href=""></a>
+ </p>
+ </tr>
+ <div>
+ </table>
+ </body>
+</html> 

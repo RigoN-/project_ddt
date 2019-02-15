@@ -1,0 +1,48 @@
+﻿<html>
+<head>
+<title>Layout</title>
+<link href="style/style1.css" rel="stylesheet"
+type="text/css">
+</head>
+<body>
+<div id="infa">
+ <table class="content">
+ <tr>
+<script type="text/javascript" src="jquery.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$("h2").append('<em></em>')
+
+	$(".thumbs a").click(function(){
+	
+		var largePath = $(this).attr("href");
+		var largeAlt = $(this).attr("title");
+		
+		$("#largeImg").attr({ src: largePath, alt: largeAlt });
+		
+		$("h2 em").html(" (" + largeAlt + ")"); return false;
+	});
+	
+});
+</script>
+<p><img id="largeImg" src="images/g-8.jpg" alt="Large image" /></p>
+<p class="text">
+ <h2 class="hdr2">Шорт-трек(эстафета)</h2>
+<p class="text">
+
+Победители: Виктор Ан, Семен Елистратов, Владимир Григорьев, Руслан Захаров (эстафета)
+</p>
+<p class="text">
+Сборная России (Виктор Ан, Семен Елистратов, Владимир Григорьев, Руслан Захаров) выиграла золотую медаль в эстафете на 5000 м на Олимпиаде-2014 в Сочи с олимпийским рекордом. Виктор Ан стал шестикратным олимпийским чемпионом в шорт-треке. Отметим, что он уже на второй Олимпиаде выигрывает медали во всех четырех дисциплинах: в Турине-2006 в составе сборной Кореи у него было 3 золота (1000 м, 1500 м, эстафета) и 1 бронза (500 м). В Сочи у него также 3 золота (500 м, 1000 м, эстафета) и 1 бронза (1500 м). Кроме того, Ан догнал знаменитого американца Аполо Антона Оно по количеству олимпийских медалей – по 8.
+</p>
+<p class="text">
+</p>
+<a href=""></a>
+ </p>
+ </tr>
+ <div>
+ </table>
+ </body>
+</html> 
