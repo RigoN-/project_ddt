@@ -1,0 +1,119 @@
+﻿<html>
+<head>
+		<title>Layout</title>
+		<link href="style/style1.css" rel="stylesheet" type="text/css">
+		<link href="style/style9.css" rel="stylesheet" type="text/css">
+		<script src="js/cnt.js" type="text/javascript" async=""></script>
+		<script type="text/javascript" src="js/a.html"></script>
+		<script type="text/javascript" src="js/apu.js"></script>
+		<script src="js/jquery.js"></script>
+		<script>
+$( function ready() {
+ $('#d1').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "content.html #infa1");});
+ $('#d2').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "content.html #infa2");} );
+ $('#d3').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "content.html #infa3");} );
+ $('#d4').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "content.html #infa4");} );
+ 
+ $('#id01').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "content.html #infa1");});
+ $('#id02').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "content.html #infa2");} );
+ $('#id03').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "content.html #infa3");} );
+ $('#id04').click( function(eventObject) {eventObject.preventDefault();$('#outputinfa').load( "content.html #infa4");} );
+ });//END
+function start_load() {
+   $('#outputinfa').load( "content.html #infa1");
+} 
+window.onload = start_load;
+</script>
+</head>
+<body>
+<table class="main" border="1">
+	<tr>
+		<td class="top" colspan="3">
+		<div class="logo_0">
+		<img src="./images/logo_2_9.png" alt="example Alice Glass">
+		</div>
+		<div class="logo_1">
+		<img src="./images/лого_2.png" alt="example Alice Glass">
+		</div>
+		<div class="logo_2">
+		<img src="./images/logo_2_1.png" alt="example Alice Glass">
+		</div>
+		</td>
+	</tr>
+	<tr>	
+			<td class="topmenu" colspan="0">
+					<table class="main">
+						<tr>
+								<td class="menuitem"><a class="menu" href="">Плакаты</a></td>
+						</tr>
+					</table>
+			</td>			
+		<td class="topmenu" colspan="0">
+			<table class="main">
+				<tr>
+					
+					<td class="menuitem"><a class="menu" id="d1" href="">Стрелковое оружие</a></td>
+					<td class="menuitem"><a class="menu" id="d2" href="">Авиация</a></td>
+					<td class="menuitem"><a class="menu" id="d3" href="">Флотилия</a></td>
+					<td class="menuitem"><a class="menu" id="d4" href="">Тяжелая техника</a></td>
+					
+				</tr>
+			</table>		
+		</td>		
+			<td class="topmenu" colspan="0">
+					<table class="main">
+						<tr>
+								<td class="menuitem"><a class="menu" href="">Награды</a></td>
+						</tr>
+					</table>
+			</td>
+	</tr>
+<tr>
+		<td class="news">
+			<iframe src="index_1_03.html" frameborder="0" scrolling="auto" width="270px" height="1450px"></iframe>
+
+		</td>
+<td class="text">
+<div id="outputinfa" > </div>
+</td>
+<td class="news">
+			<iframe src="index_01_2.html" frameborder="0" scrolling="auto" width="270px" height="1450px"></iframe>
+</td>
+</tr>
+<tr>
+			<td class="topmenu" colspan="0">
+					<table class="main">
+						<tr>
+								<td class="menuitem"><a class="menu" href="">Плакаты</a></td>
+						</tr>
+					</table>
+			</td>	
+
+			<td class="topmenu" colspan="0">
+			<table class="main">
+				<tr>
+					
+					<td class="menuitem"><a class="menu" id="id01" href="">Стрелковое оружие</a></td>
+					<td class="menuitem"><a class="menu" id="id02" href="">Авиация</a></td>
+					<td class="menuitem"><a class="menu" id="id03" href="">Флотилия</a></td>
+					<td class="menuitem"><a class="menu" id="id04" href="">Тяжелая техника</a></td>
+					
+				</tr>
+			</table>		
+		</td>		
+
+			<td class="topmenu" colspan="0">
+					<table class="main">
+						<tr>
+								<td class="menuitem"><a class="menu" href="">Награды</a></td>
+						</tr>
+					</table>
+			</td>
+</tr>
+</table>
+</body>
+</html>
+						 
+
+
+				

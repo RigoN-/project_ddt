@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link href="style/style_01.css" rel="stylesheet" type="text/css">
+<title>Collapsible Message Panels</title>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	
+	//hide message_body after the first one
+	$(".message_list .message_body:gt(0)").hide();
+	
+	//hide message li after the 5th
+	$(".message_list li:gt(15)").hide();
+
+	
+	//toggle message_body
+	$(".message_head").click(function(){
+		$(this).next(".message_body").slideToggle(500)
+		return false;
+	});
+
+	//collapse all messages
+	$(".collpase_all_message").click(function(){
+		$(".message_body").slideUp(500)
+		return false;
+	});
+
+	//show all messages
+	$(".show_all_message").click(function(){
+		$(this).hide()
+		$(".show_recent_only").show()
+		$(".message_list li:gt(4)").slideDown()
+		return false;
+	});
+
+	//show recent messages only
+	$(".show_recent_only").click(function(){
+		$(this).hide()
+		$(".show_all_message").show()
+		$(".message_list li:gt(4)").slideUp()
+		return false;
+	});
+
+});
+</script>
+		
+</head>
+<body>
+<ol class="message_list">
+	<li>
+		<p class="message_head"><cite>Орден Отечественной Войны:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+					<br />
+					<br />
+					<img src="images/28b6f2ab1bfeaba7f0ca2528e00.jpg" width="150" height="150" >
+		</div>
+	</li>
+	<li>
+	<p class="message_head"><cite>Орден Красной Звезды:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<br />
+		<br />
+			<img src="images/e47e22b5aeeec8f0063ad0d4291_prev.jpg" width="150" height="150" >
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Орден Ленина:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<br />
+		<br />
+			<p><img src="images/da7dbe25735b2087a78c26d51bb.jpg" width="150" height="150" ></p>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Орден Богдана Хмельницкого:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<br />
+		<br />
+			<p><img src="images/1304269423_bogdana-avers.jpg" width="150" height="150" vspace="5" ></p>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Орден Кутузова:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<br />
+		<br />
+			<p><img src="images/a460ad8c96b9b6ce16a54d96a4a.jpg" width="150" height="150" ></p>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Орден Трудового Знамени:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+		<br />
+		<br />
+			<p><img src="images/order.jpg" width="120" height="170" ></p>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Орден Суворова:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+			<br />
+		<br />
+			<p><img src="images/suv.jpg" width="150" height="150" ></p>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Орден Нахимова:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+			<br />
+		<br />
+			<p><img src="images/nax.png" width="150" height="150" ></p>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Орден Победы:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+			<br />
+		<br />
+			<p><img src="images/pob.jpg" width="150" height="150" ></p>
+		</div>
+	</li>
+		<li>
+		<p class="message_head"><cite>Орден Славы:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+			<br />
+		<br />
+			<p><img src="images/slav.png" width="110" height="190" ></p>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Орден Красного Знамени:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+			<br />
+		<br />
+			<p><img src="images/znam.png" width="110" height="150" ></p>
+		</div>
+	</li>
+	<li>
+		<p class="message_head"><cite>Орден Ушакова:</cite> <span class="timestamp"></span></p>
+		<div class="message_body">
+			<br />
+		<br />
+			<p><img src="images/yii.jpg" width="150" height="150" ></p>
+		</div>
+	</li>
+</ol>
+<body>
+</html>
